@@ -3,6 +3,9 @@ layout: page
 title: Meet our four tutors 
 permalink: /about/
 ---
+
+Meet our four tutors
+
 <table class= "Table1">
 
 <table width="600" border="1" cellpadding="2">
