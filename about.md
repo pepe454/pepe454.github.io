@@ -3,8 +3,17 @@ layout: page
 title: Meet our four tutors 
 permalink: /about/
 ---
-
-Danny Fryer
-Eric Hilhorst
-Akash Kaza
-<Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br>Tyler Peterson
+<table>
+  <tr>
+    <td>Danny Fryer</td>
+  </tr>
+  <tr>
+    <td>Tyler Peterson</td>
+  </tr>
+  <tr>
+    <td>Eric Hilhorst</td>
+  </tr>
+  <tr>
+    <td>Akash Kaza</td>
+  </tr>
+</table>
