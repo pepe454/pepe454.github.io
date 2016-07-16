@@ -1,15 +1,13 @@
 ---
 layout: page
-title: About
+title: About the Creators
 permalink: /about/
 ---
 
-This is the BASIC Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as BASIC Jekyll usage documentation at [FuckEric.com](http://jekyllrb.com/)
+Eric's kinda shit. That's pretty much it.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+Danny can do HTML and stuff and he lived in HAHVAHD YAHD.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Akash is kinda just freeloading and all his HTML experience is from inspect element.
+
+Tyler is....
