@@ -9,10 +9,10 @@
 title: BASIC
 mail_to: eric@hilhorst.us
 description: > # this means to ignore newlines until "baseurl:"
-  Alright akash lets actually try to work now
+  Haha you looked you bitch
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: Steak tastes SO GOOD
+twitter_username: Eric look to your right
 github_username:  jekyll
 
 # Build settings
