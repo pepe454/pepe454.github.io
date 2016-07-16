@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sick Goal Turkey!"
+title:  "Gtard's B-ball hoop: a story of dreams and memes"
 date:   2016-07-15 19:16:33 -0400
 categories: jekyll update
 ---
