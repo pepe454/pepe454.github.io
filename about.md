@@ -6,9 +6,9 @@ permalink: /about/
 <table class= "Table1">
 
   <tr>
-    <td><Br>Danny Fryer</td>
-    <td><Br>Tyler Peterson</td>
-    <td><Br>Eric Hilhorst</td>
-    <td><Br>Akash Kaza</td>
+    <td>Danny Fryer</td>
+    <td>Tyler Peterson</td>
+    <td>Eric Hilhorst</td>
+    <td>Akash Kaza</td>
   </tr>
 </table>
