@@ -8,8 +8,8 @@ permalink: /about/
 <table width="600" border="1">
   <tr>
     <td width="25%" align="center">Danny Fryer</td>
-    <td width="25%" bgcolor="blue">Tyler Peterson</td>
-    <td width="25%" style="color: red">Eric Hilhorst</td>
-    <td width="25%">Akash Kaza</td>
+    <td width="25%" align="center" bgcolor="white">Tyler Peterson</td>
+    <td width="25%" align="center" style="color: red">Eric Hilhorst</td>
+    <td width="25%" align="center">Akash Kaza</td>
   </tr>
 </table>
