@@ -10,6 +10,6 @@ permalink: /about/
     <td width="25%" align="center">Danny Fryer</td>
     <td width="25%" align="center" bgcolor="white">Tyler Peterson</td>
     <td width="25%" align="center" style="color: red">Eric Hilhorst</td>
-    <td width="25%" align="center">Akash Kaza</td>
+    <td width="25%" align="center"><b>Akash Kaza</b></td>
   </tr>
 </table>
