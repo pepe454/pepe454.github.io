@@ -3,7 +3,8 @@ layout: page
 title: Meet our four tutors 
 permalink: /about/
 ---
-<table>
+<table class= "Table 1">
+
   <tr>
     <td>Danny Fryer</td>
   </tr>
