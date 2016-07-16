@@ -6,5 +6,5 @@ permalink: /about/
 
 Danny Fryer 
 <Br> Tyler Peterson
-Eric Hilhorst
+<Br> Eric Hilhorst
 Akash Kaza
