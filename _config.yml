@@ -9,10 +9,10 @@
 title: BASIC
 mail_to: eric@hilhorst.us
 description: > # this means to ignore newlines until "baseurl:"
-  This website is meant to teach Indian Kids how to not eat fucking curry every single god damn day
+  Fan website for lovers of Curry (STEPH) and haters of Eric (Everyone)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: Danny is a FAFF
+twitter_username: Eric will never win at life
 github_username:  jekyll
 
 # Build settings
