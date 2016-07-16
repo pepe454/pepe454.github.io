@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Meat our four tutors 
+title: Meet our four tutors 
 permalink: /about/
 ---
 
