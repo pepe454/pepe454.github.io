@@ -5,7 +5,7 @@ permalink: /about/
 ---
 <table class= "Table1">
 
-<table width= "600" border=1>
+<table width="600" border="1">
   <tr>
     <td width="25%" >Danny Fryer</td>
     <td width="25%">Tyler Peterson</td>
