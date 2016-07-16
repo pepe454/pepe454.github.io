@@ -8,10 +8,10 @@ permalink: /about/
     <td>Danny Fryer</td>
   </tr>
   <tr>
-    <td>Eric Hilhorst</td>
+    <td>Tyler Peterson</td>
   </tr>
   <tr>
-    <td>Tyler Peterson</td>
+    <td>Eric Hilhorst</td>
   </tr>
   <tr>
     <td>Akash Kaza</td>
