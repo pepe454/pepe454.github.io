@@ -7,9 +7,9 @@ permalink: /about/
 
 <table width= "600">
   <tr>
-    <td width="150" >Danny Fryer</td>
-    <td width="150">Tyler Peterson</td>
-    <td width="150">Eric Hilhorst</td>
-    <td width="150">Akash Kaza</td>
+    <td width="25%" >Danny Fryer</td>
+    <td width="25%">Tyler Peterson</td>
+    <td width="25%">Eric Hilhorst</td>
+    <td width="25%">Akash Kaza</td>
   </tr>
 </table>
