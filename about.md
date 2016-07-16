@@ -15,11 +15,16 @@ permalink: /about/
     <td width="25%" align="center" style="color: red">Eric Hilhorst</td>
     <td width="25%" align="center"><b>Akash Kaza</b></td>
   </tr>
+  <tr>
+    <td>
+    <ul>
+      <li>smart</li>
+      <li>good looking</li>
+      <li>fun</li>
+    </ul>
+    </td>
+  </tr>  
 </table>
 
 <h4>Our qualifications</h4>
-<ul>
-  <li>smart</li>
-  <li>good looking</li>
-  <li>fun</li>
-</ul>
+
