@@ -27,7 +27,7 @@ permalink: /about/
     </td>
 <!--Tyler's column-->
     <td>
-    Whatever Tyler would like to put here for qualifications
+    He's like... Got a good personality
     </td>
   </tr>  
 </table>
