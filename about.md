@@ -4,7 +4,7 @@ title: Meet our four tutors
 permalink: /about/
 ---
 
-Danny Fryer 
-<Br> Tyler Peterson
-<Br> Eric Hilhorst
+Danny Fryer
+Eric Hilhorst
 Akash Kaza
+<Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br>Tyler Peterson
