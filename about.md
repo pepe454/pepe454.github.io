@@ -5,6 +5,6 @@ permalink: /about/
 ---
 
 Danny Fryer 
-Tyler Peterson
+<Br> Tyler Peterson </Br>
 Eric Hilhorst
 Akash Kaza
