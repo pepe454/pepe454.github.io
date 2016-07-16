@@ -5,10 +5,11 @@ permalink: /about/
 ---
 <table class= "Table1">
 
+<table width= "400">
   <tr>
-    <td>Danny Fryer</td>
-    <td>Tyler Peterson</td>
-    <td>Eric Hilhorst</td>
-    <td>Akash Kaza</td>
+    <td width="100" >Danny Fryer</td>
+    <td width="100">Tyler Peterson</td>
+    <td width="100">Eric Hilhorst</td>
+    <td width="100">Akash Kaza</td>
   </tr>
 </table>
