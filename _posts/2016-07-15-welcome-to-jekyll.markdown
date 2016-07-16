@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Gtard's B-ball hoop: a story of dreams and memes"
+title:  "Norweigian Wood"
 date:   2016-07-15 19:16:33 -0400
 categories: jekyll update
 ---
