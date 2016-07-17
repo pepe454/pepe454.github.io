@@ -6,5 +6,6 @@ categories: jekyll update
 ---
 <ul>
 <li><a href="https://www.khanacademy.org/">Khan Academy</a></li>
+<li><a href="https://www.codecademy.com/">Code Academy</a></li>
 </ul>
 
