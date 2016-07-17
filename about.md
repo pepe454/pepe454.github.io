@@ -29,6 +29,14 @@ permalink: /about/
     <td>
     He's like... Got a good personality
     </td>
+<!--Eric's column-->
+    <td>
+    He's cool
+    </td>
+<!--Akash's column-->
+    <td>
+    meh
+    </td>
   </tr>  
 </table>
 
