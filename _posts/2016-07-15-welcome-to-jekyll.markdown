@@ -4,6 +4,7 @@ title:  "Helpful Free Websites"
 date:   2016-07-15 19:16:33 -0400
 categories: jekyll update
 ---
+<!--This page controls what happens after the Helpful Free Websites link is clicked-->
 <ul>
 <li><a href="https://www.khanacademy.org/">Khan Academy</a></li>
 <li><a href="https://www.codecademy.com/">Code Academy</a></li>
