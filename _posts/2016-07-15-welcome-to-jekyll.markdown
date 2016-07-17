@@ -3,6 +3,7 @@ layout: post
 title:  "Helpful Free Websites"
 date:   2016-07-15 19:16:33 -0400
 categories: jekyll update
+What happens when I put text here
 ---
 <ul>
 <li><a href="https://www.khanacademy.org/">Khan Academy</a></li>
