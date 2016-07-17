@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Khan Academy"
+title:  "Helpful Free Websites"
 date:   2016-07-15 19:16:33 -0400
 categories: jekyll update
 ---
-<a href="https://www.khanacademy.org/"></a>
+<a href="https://www.khanacademy.org/">Khan Academy</a>
+
