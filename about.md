@@ -26,7 +26,7 @@ Here is a little more information about us
     </ul>
     </td>
 <!--Tyler's column-->
-    <td>
+    <td align="center">
     <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png" height="150px">
     </td>
 <!--Eric's column-->
@@ -34,7 +34,7 @@ Here is a little more information about us
     He's cool
     </td>
 <!--Akash's column-->
-    <td>
+    <td align="center">
     <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/File_000.png" height="150px">
     </td>
   </tr>  
