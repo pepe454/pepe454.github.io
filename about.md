@@ -27,7 +27,7 @@ Here is a little more information about us
     </td>
 <!--Tyler's column-->
     <td>
-    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png">
+    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png" height=50px>
     </td>
 <!--Eric's column-->
     <td>
@@ -35,7 +35,7 @@ Here is a little more information about us
     </td>
 <!--Akash's column-->
     <td>
-    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/File_000.png">
+    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/File_000.png" height=50px>
     </td>
   </tr>  
 </table>
