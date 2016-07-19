@@ -12,7 +12,7 @@ Here is a little more information about us
   <tr>
     <td width="25%" align="center"><i>Danny Fryer</i></td>
     <td width="25%" align="center"><i>Tyler Peterson</i></td>
-    <td width="25%" align="center" style="color: red"><i>Erik Hilhorst</i></td>
+    <td width="25%" align="center"><i>Eric Hilhorst</i></td>
     <td width="25%" align="center"><i>Akash Kaza</i></td>
   </tr>
 <!--Danny's column-->
@@ -27,7 +27,7 @@ Here is a little more information about us
     </td>
 <!--Tyler's column-->
     <td>
-    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png" height=50px>
+    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png" height="50px">
     </td>
 <!--Eric's column-->
     <td>
@@ -35,7 +35,7 @@ Here is a little more information about us
     </td>
 <!--Akash's column-->
     <td>
-    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/File_000.png" height=50px>
+    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/File_000.png" height="50px">
     </td>
   </tr>  
 </table>
