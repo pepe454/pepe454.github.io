@@ -8,7 +8,7 @@ Here is a little more information about us
 
 <table class= "Table1" align="center">
 
-<table width="900" border="1" cellpadding="2">
+<table width="900" border="1" cellpadding="2" align="center">
   <tr>
     <td width="25%" align="center"><i>Danny Fryer</i></td>
     <td width="25%" align="center" bgcolor="white"><i>Tyler Peterson</i></td>
