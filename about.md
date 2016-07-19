@@ -35,7 +35,7 @@ Here is a little more information about us
     </td>
 <!--Akash's column-->
     <td>
-    Akash's page
+    <img src="File_000.png">
     </td>
   </tr>  
 </table>
