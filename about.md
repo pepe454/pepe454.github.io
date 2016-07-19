@@ -6,7 +6,7 @@ permalink: /about/
 
 Here is a little more information about us
 
-<table class= "Table1">
+<table class= "Table1" align="center">
 
 <table width="900" border="1" cellpadding="2">
   <tr>
