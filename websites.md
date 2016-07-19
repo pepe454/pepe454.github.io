@@ -1,6 +1,8 @@
-
-
-
+---
+layout: page
+title: Helpful Free Websites 
+permalink: /resources/
+---
 <!--This page controls what happens after the Helpful Free Websites link is clicked-->
 <ul>
   <li>
