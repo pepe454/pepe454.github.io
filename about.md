@@ -27,7 +27,7 @@ Here is a little more information about us
     </td>
 <!--Tyler's column-->
     <td>
-    He's like... Got a good personality
+    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png">
     </td>
 <!--Eric's column-->
     <td>
