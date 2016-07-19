@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: black;
+    color: white;
     text-decoration: none;
 
     &:visited {
@@ -142,7 +142,7 @@ code {
 
 pre {
     padding: 8px 12px;
-    overflow-x: auto;
+    
 
     > code {
         border: 0;
