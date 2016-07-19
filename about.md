@@ -12,7 +12,7 @@ Here is a little more information about us
   <tr>
     <td width="25%" align="center"><i>Danny Fryer</i></td>
     <td width="25%" align="center"><i>Tyler Peterson</i></td>
-    <td width="25%" align="center"><i>Eric Hilhorst</i></td>
+    <td width="25%" align="center"><i>Erik Hilhorst</i></td>
     <td width="25%" align="center"><i>Akash Kaza</i></td>
   </tr>
 <!--Danny's column-->
