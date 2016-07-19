@@ -4,7 +4,7 @@ title: Meet our four tutors
 permalink: /about/
 ---
 
-Does this work?
+Here is a little more information about us
 
 <table class= "Table1">
 
