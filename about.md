@@ -35,7 +35,7 @@ permalink: /about/
     </td>
 <!--Akash's column-->
     <td>
-    meh
+    Akash's page
     </td>
   </tr>  
 </table>
