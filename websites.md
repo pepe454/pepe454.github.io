@@ -4,11 +4,8 @@ title: Helpful Free Websites
 permalink: /resources/
 ---
 <!--This page controls what happens after the Helpful Free Websites link is clicked-->
-
+<h3> These are some helpful resources for your studies.</h3> 
 <ul>
-  <li>
-    <h3> These are some helpful resources for your studies.</h3> 
-  </li>
   <li>
      <a href="https://www.khanacademy.org/">Khan Academy</a>
   </li>
