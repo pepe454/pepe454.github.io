@@ -161,15 +161,15 @@ pre {
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: 0;
-    padding-right: $spacing-unit;
+    padding-right: 0;
     padding-left: 0;
     @extend %clearfix;
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: 200px;
-        padding-left: 200px;
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }
 
