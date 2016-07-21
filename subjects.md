@@ -21,6 +21,7 @@ permalink: /subjects/
    
 </style>
 </head>
+<body>
 
 <h2 align="center">Choose from the following subjects</h2>
 
