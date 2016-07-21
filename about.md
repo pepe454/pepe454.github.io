@@ -43,6 +43,7 @@ Here is a little more information about us
 <!--Danny's column-->
   <tr>
     <td>
+    Here we could write a little paragraph about ourselves
     </td>
     <td>
     Here we could write a little paragraph about ourselves
