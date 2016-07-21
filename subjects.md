@@ -3,6 +3,9 @@ layout: page
 title: These are the subjects we teach
 permalink: /subjects/
 ---
+<html>
+<head>
+<style>
 .button {
    background-color: #FFFFFF;
    border: none;
