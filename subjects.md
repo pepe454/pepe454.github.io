@@ -23,7 +23,7 @@ permalink: /subjects/
 </head>
 <body>
 
-<h2 align="center">Choose from the following subjects</h2>
+<h2 align="center" color: white>Chooose from the following subjects</h2>
 
 <a href="#" class="button">Math</a>
 <a href="#" class="button">Science</a>
