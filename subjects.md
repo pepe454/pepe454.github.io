@@ -17,3 +17,6 @@ permalink: /subjects/
    font-size: 12px;
 }
    
+</style>
+</head>
+</html>
