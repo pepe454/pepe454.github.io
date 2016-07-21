@@ -25,6 +25,12 @@ Here is a little more information about us
       <li>fun</li>
     </ul>
     </td>
+    <td>
+    Here we could write a little paragraph about ourselves
+    </td>
+    <td>
+    Here we could write our best subjects, like what we would specifically tutor in
+    </td>
 <!--Tyler's column-->
     <td align="center">
     <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png" height="150px">
