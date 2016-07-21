@@ -45,13 +45,38 @@ Here is a little more information about us
     <td>
     Here we could write a little paragraph about ourselves
     </td>
+<!--Tyler's column-->
     <td>
     Here we could write a little paragraph about ourselves
     </td>
+<!--Eric's column-->
     <td>
     Here we could write a little paragraph about ourselves
     <td>
-   
+<!--Akash's column-->
+    <td>
+    Here we could write a little paragraph about ourselves
+    </td>
+  </tr>
+<!--Fourth Row-->
+<!--Danny's column-->
+  <tr>
+    <td>
+    We can put our best subjects here (the classes we would be best suited to tutor)
+    </td>
+<!--Tyler's column-->
+    <td>
+    We can put our best subjects here (the classes we would be best suited to tutor)
+    </td>
+<!--Eric's column-->
+    <td>
+    We can put our best subjects here (the classes we would be best suited to tutor)
+    </td>
+<!--Akash's column-->
+    <td>
+    We can put our best subjects here (the classes we would be best suited to tutor)
+    </td>
+  </tr>
 </table>
 
 There may be more tutors to follow
