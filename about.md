@@ -15,6 +15,7 @@ Here is a little more information about us
     <td width="25%" align="center"><i>Eric Hilhorst</i></td>
     <td width="25%" align="center"><i>Akash Kaza</i></td>
   </tr>
+<!--Second Row-->
 <!--Danny's column-->
   <tr>
     <td>
@@ -24,12 +25,6 @@ Here is a little more information about us
       <li>good looking</li>
       <li>fun</li>
     </ul>
-    </td>
-    <td>
-    Here we could write a little paragraph about ourselves
-    </td>
-    <td>
-    Here we could write our best subjects, like what we would specifically tutor in
     </td>
 <!--Tyler's column-->
     <td align="center">
@@ -43,7 +38,19 @@ Here is a little more information about us
     <td align="center">
     <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/File_000.png" height="150px">
     </td>
-  </tr>  
+  </tr>
+<!--Third Row--.
+<!--Danny's column-->
+  <tr>
+    <td>
+    </td>
+    <td>
+    Here we could write a little paragraph about ourselves
+    </td>
+    <td>
+    Here we could write a little paragraph about ourselves
+    <td>
+   
 </table>
 
 There may be more tutors to follow
