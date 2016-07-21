@@ -4,7 +4,7 @@ title: Meet our four tutors
 permalink: /about/
 ---
 
-<h2>Here is a little more information about us</h2>
+<h3>Here is a little more information about us</h3>
 
 <table>
 
