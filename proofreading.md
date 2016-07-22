@@ -28,7 +28,7 @@ permalink: /proofreading/
 <table>
  <tr>
    <td>
-   How about now
+   This would be awesome if it worked
    </td>
  </tr>
 </table>
