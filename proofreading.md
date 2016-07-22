@@ -20,7 +20,7 @@ permalink: /proofreading/
            name="Essay"
            cols="35"
            rows="10"
-           style="Width 150px; Height 100px;"> 
+           style="width:600px; height:350px;"> 
     <br><br>
     <input type="submit" value="Submit">
   </fieldset>
@@ -28,7 +28,7 @@ permalink: /proofreading/
 <table>
  <tr>
    <td>
-   yo does this work
+   How about now
    </td>
  </tr>
 </table>
