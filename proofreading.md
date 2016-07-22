@@ -16,11 +16,11 @@ permalink: /proofreading/
     <input type="text" name="lastname">
     <br>
     Essay:<br>
-    <input type="text" 
-           name="Essay"
-           cols="35"
-           rows="10"
-           style="width:600px; height:350px;"> 
+    <textarea name="Text1" 
+              cols="35" 
+              rows="10"
+              style="width:600px; height:350px;">
+    </textarea> 
     <br><br>
     <input type="submit" value="Submit">
   </fieldset>
