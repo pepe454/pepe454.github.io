@@ -28,7 +28,7 @@ permalink: /proofreading/
 <table>
  <tr>
    <td>
-   This would be awesome if it worked
+   Now we need to figure out where to submit these essays
    </td>
  </tr>
 </table>
