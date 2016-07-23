@@ -20,5 +20,6 @@ permalink: /resources/
   </li>
   <li>
      <a href="https://www.youtube.com/watch?v=6E9WU9TGrec&list=PLqfqeCh72YERmVLH50u655gJCFrs1XLpC">Crash Course US history</a>
+  </li>
 </ul>
 
