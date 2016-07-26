@@ -18,7 +18,7 @@ permalink: /subjects/
    border-radius: 6px;
    margin-right: 10px;
    max-width: 200px;
-   max-height: 70px;
+   height: 70px;
 }
    
 </style>
