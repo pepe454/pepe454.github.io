@@ -25,11 +25,15 @@ permalink: /subjects/
 
 <h2 align="center">Choose from the following subjects</h2>
 
-<a href="#" class="button" margin:auto>Math</a>
-<a href="#" class="button">Science</a>
-<a href="#" class="button">Social Studies</a>
-<a href="#" class="button">English</a>
-<a href="#" class="button">World Language</a>
+<table align="center">
+  <tr>
+    <td><a href="#" class="button">Math</a></td>
+    <td><a href="#" class="button">Science</a></td>
+    <td><a href="#" class="button">Social Studies</a></td>
+    <td><a href="#" class="button">English</a></td>
+    <td><a href="#" class="button">World Language</a></td>
+  </tr>
+</table>
 
 </body>
 <!--We can use the hover ability to add buttons underneath-->
