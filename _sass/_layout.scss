@@ -35,7 +35,8 @@
     .menu-icon {
         display: none;
     }
-
+    
+    
     .page-link {
         color: midnight-blue;
         line-height: $base-line-height;
@@ -45,6 +46,11 @@
             margin-right: 12px;
         }
     }
+    
+    .page-link:hover {
+        background: gray;
+    }
+
 
     @include media-query($on-palm) {
         position: absolute;
