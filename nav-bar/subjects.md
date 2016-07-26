@@ -33,7 +33,7 @@ permalink: /subjects/
     <td><a href="#" class="button">Science</a></td>
     <td><a href="#" class="button">Social Studies</a></td>
     <td><a href="#" class="button">English</a></td>
-    <td><a href="#" class="button">World Language</a></td>
+    <td><a href="#" class="button">W. Language</a></td>
   </tr>
 </table>
 
