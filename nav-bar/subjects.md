@@ -21,11 +21,11 @@ permalink: /subjects/
    
 </style>
 </head>
-<body margin:auto>
+<body>
 
 <h2 align="center">Choose from the following subjects</h2>
 
-<a href="#" class="button">Math</a>
+<a href="#" class="button" margin:auto>Math</a>
 <a href="#" class="button">Science</a>
 <a href="#" class="button">Social Studies</a>
 <a href="#" class="button">English</a>
