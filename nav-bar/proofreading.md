@@ -6,7 +6,7 @@ permalink: /proofreading/
 <html>
 <body>
 
-<form action="https://github.com/pepe454/pepe454.github.io/blob/master/email.php">
+<form action="{{ email.php | prepend: site.baseurl }}">
   <fieldset>
     <legend>Your Essay:</legend>
     First name:<br>
