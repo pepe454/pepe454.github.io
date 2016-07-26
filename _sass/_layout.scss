@@ -18,7 +18,7 @@
     margin-left: 32%;
     margin-right: 25%;
     @include media-query($on-palm) {
-      margin-left: 0;   
+      text-align: left;   
         
     }
     
@@ -170,6 +170,8 @@
  */
 .page-content {
     padding: 30px;
+    margin-left: 20px;
+    margin-right: 20px:
 }
 
 .page-heading {
