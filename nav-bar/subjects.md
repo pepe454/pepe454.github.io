@@ -10,7 +10,7 @@ permalink: /subjects/
    background-color: white;
    border: none;
    color: midnightblue;
-   padding: 12px 24px;
+   padding: 16px 32px;
    text-align: center;
    text-decoration: none;
    display: inline-block;
