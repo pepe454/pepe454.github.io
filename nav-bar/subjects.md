@@ -47,7 +47,6 @@ ul li ul li:hover {background: yellow;}
 </head>
 <body>
 
-<div>
   <ul>
     <li>
       <a href="#">Math</a>
@@ -94,7 +93,7 @@ ul li ul li:hover {background: yellow;}
     <li>
       
   </ul>
-</div>
+
 
 </body>
 </html>
