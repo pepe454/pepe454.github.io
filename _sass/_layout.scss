@@ -16,7 +16,7 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     color: white;
-    margin-left: 29%;
+    margin-left: 32%;
     margin-right: 25%;
     
 }
@@ -24,7 +24,7 @@
 
 .site-nav {
     line-height: 56px;
-    margin-left: 100px;
+    margin-left: 200px;
 
     .menu-icon {
         display: none;
@@ -36,7 +36,7 @@
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
-            margin-right: 6px;
+            margin-right: 12px;
         }
     }
 
