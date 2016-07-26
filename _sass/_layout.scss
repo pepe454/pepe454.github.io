@@ -169,6 +169,11 @@
 /**
  * Page content
  */
+ 
+ .gallery {
+    display: flex;
+    flex-wrap: wrap;
+ }
 .page-content {
     padding: 30px;
     margin-left: 20px;
