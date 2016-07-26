@@ -18,6 +18,10 @@
     color: white;
     margin-left: 32%;
     margin-right: 25%;
+    @include media-query($on-palm) {
+      margin-left: 0;   
+        
+    }
     
 }
 
