@@ -16,7 +16,7 @@ permalink: /subjects/
    display: inline-block;
    font-size: 12px;
    border-radius: 6px;
-   margin-right: 5px;
+   margin-right: 10px;
 }
    
 </style>
