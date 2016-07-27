@@ -37,6 +37,8 @@
     
     
     .page-link {
+        display: inline-block;
+        text-align:center;
         color: white;
         line-height: $base-line-height;
         
