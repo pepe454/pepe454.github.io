@@ -27,20 +27,16 @@
 .site-nav {
     line-height: 30px;
     background-color: #d0ab1b;
-    margin-left: 0%;
-    margin-right: 0%;
     border-top: 2px solid white;
-    display: inline-block;
-    text-align: center;
-
+    
     .menu-icon {
         display: none;
     }
     
     
     .page-link {
-        display: inline-block;
         margin-left: 20px;
+        margin-right: -10px;
         color: white;
         line-height: $base-line-height;
         
