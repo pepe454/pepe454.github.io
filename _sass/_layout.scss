@@ -14,7 +14,7 @@
     line-height: 80px;
     letter-spacing: -1px;
     color: white;
-    margin: auto;
+    margin-left: 27%;
     @include media-query($on-palm) {
       margin-left: 0%;
       text-align: left;   
@@ -35,8 +35,8 @@
     
     
     .page-link {
-        margin-left: 50px;
-        margin-right: -30px;
+        display: inline-block;
+        margin-left: 30px;
         color: white;
         line-height: $base-line-height;
         
