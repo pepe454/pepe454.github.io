@@ -36,7 +36,7 @@
     
     .page-link {
         display: inline-block;
-        margin-left: 30px;
+        margin-left: 39px;
         color: white;
         line-height: $base-line-height;
         
@@ -108,6 +108,7 @@
  .gallery {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 30px;
  }
  
  .gallery-item{
