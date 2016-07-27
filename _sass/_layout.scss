@@ -23,6 +23,16 @@
     
 }
 
+.site-nav.center .site-nav-inner {
+    text-align: center;
+}
+
+.site-nav.center .site-nav-inner .nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
 
 .site-nav {
     line-height: 30px;
