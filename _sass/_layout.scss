@@ -30,8 +30,6 @@
     margin-left: 0%;
     margin-right: 0%;
     border-top: 2px solid white;
-    display: inline-block;
-    text-align: center;
 
     .menu-icon {
         display: none;
@@ -39,6 +37,8 @@
     
     
     .page-link {
+        display: inline-block;
+        text-align: center;
         color: white;
         line-height: $base-line-height;
         
