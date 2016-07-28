@@ -15,6 +15,9 @@ permalink: /proofreading/
     Last name:<br>
     <input type="text" name="lastname">
     <br>
+    Email:<br>
+    <input type="text" name="email">
+    <br>
     Essay:<br>
     <textarea name="Text1" 
               cols="35" 
