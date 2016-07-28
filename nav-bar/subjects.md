@@ -7,9 +7,9 @@ permalink: /subjects/
 <head>
 <style>
 .button {
-   background-color: white;
+   background-color: #575757;
    border: none;
-   color: midnightblue;
+   color: white;
    padding: 14px 60px;
    text-align: center;
    text-decoration: none;
