@@ -40,6 +40,8 @@
     .page-link {
         display: inline;
         text-align: center;
+        background-color: #d0ab1b;
+        border-top: 2px solid white;
         margin-left: 40px;
         color: white;
         line-height: $base-line-height;
@@ -150,6 +152,10 @@ table, th, td {
    border: 2px solid white;
 }
 
+.site-nav {
+    background-color: #d0ab1b;
+    border-top: 2px solid white;
+}
 
 /**
  * Posts
