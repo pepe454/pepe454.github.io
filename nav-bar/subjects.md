@@ -6,7 +6,7 @@ permalink: /subjects/
 <html>
 <head>
 <style>
-div {background-color: white;}
+div {background-color: black;}
 div a {
     text-decoration: none;
     color: midnightblue;
