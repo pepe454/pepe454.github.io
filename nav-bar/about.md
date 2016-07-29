@@ -18,13 +18,9 @@ permalink: /about/
 <!--Second Row-->
 <!--Danny's column-->
   <tr>
-    <td>
-    <h4>Our qualifications</h4>
-    <ul>
-      <li>smart</li>
-      <li>good looking</li>
-      <li>fun</li>
-    </ul>
+    <td align="center">
+    <a href="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/Danny.md"><img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png" height="150px">
+    </a>
     </td>
 <!--Tyler's column-->
     <td align="center">
