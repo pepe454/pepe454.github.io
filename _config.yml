@@ -15,6 +15,7 @@ url: "http://www.simsburytutoringservice.com/" # the base hostname & protocol fo
 twitter_username: What's up dog. 
 github_username:  e12real
 github_username:  pepe454
+paginate: 20
 
 # Build settings
 markdown: kramdown
