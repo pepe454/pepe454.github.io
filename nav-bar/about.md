@@ -19,7 +19,7 @@ permalink: /about/
 <!--Danny's column-->
   <tr>
     <td align="center">
-    <a href={{ "https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/Danny.md" | prepend: site.baseurl }}><img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png" height="150px">
+    <a href={{ "/nav-bar/tutor-profiles/Danny.md" | prepend: site.baseurl }}><img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png" height="150px">
     </a>
     </td>
 <!--Tyler's column-->
