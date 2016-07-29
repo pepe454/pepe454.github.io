@@ -64,7 +64,7 @@ ul li ul li:hover {background: yellow;}
         <li><a href="#">Environmental Science</a></li>
       </ul>
     </li>
-    <li>
+    <li class="button">
       <a href="#">Social Studies</a>
         <ul>
           <li><a href="#">U.S. History</a></li>
@@ -72,7 +72,7 @@ ul li ul li:hover {background: yellow;}
           <li><a href="#">Government</a></li>
         </ul>
     </li>
-    <li>
+    <li class="button">
       <a href="#">English</a>
         <ul>
           <li><a href="#">Grammer</a></li>
@@ -80,7 +80,7 @@ ul li ul li:hover {background: yellow;}
           <li><a href="#">Link 3</a></li>
         </ul>
     </li>
-    <li>
+    <li class="button">
       <a href="#">W. Language</a>
         <ul>
           <li><a href="#">Spanish</a></li>
