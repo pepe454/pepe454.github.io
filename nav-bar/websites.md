@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Helpful Free Websites 
+title: Other Free Resources
 permalink: /resources/
 ---
 <!--This page controls what happens after the Helpful Free Websites link is clicked-->
