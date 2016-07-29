@@ -38,6 +38,8 @@
     
     
     .page-link {
+        display: inline;
+        text-align: center;
         margin-left: 40px;
         color: white;
         line-height: $base-line-height;
