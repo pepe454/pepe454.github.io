@@ -11,7 +11,7 @@ ul {
   padding: 0;
 }
 ul li {display: inline-block;}
-ul li:hover {background: #555;}
+ul li:hover {background: yellow;}
 ul li:hover ul {display: block;}
 ul li ul {
   position: absolute;
@@ -19,11 +19,11 @@ ul li ul {
   display: none;
 }
 ul li ul li {
-  background: #555;
+  background: yellow;
   display: block;
 }
 ul li ul li a {display:block !important;}
-ul li ul li:hover {background: #666;}
+ul li ul li:hover {background: yellow;}
 </style>
 <body>
 
