@@ -26,12 +26,27 @@ ul li ul li {
 }
 ul li ul li a {display:block !important;}
 ul li ul li:hover {background: yellow;}
+.button {
+   background-color: white;
+   border: none;
+   color: midnightblue;
+   padding: 14px 60px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 12px;
+   border-radius: 6px;
+   margin-right: 10px;
+   max-width: 200px;
+   height: 40px;
+}
+
 </style>
 <body>
 
 <div>
   <ul>
-    <li>
+    <li class="button">
       <a href="#">Math</a>
         <ul>
           <li><a href="#">Algebra 1</a></li>
@@ -41,7 +56,7 @@ ul li ul li:hover {background: yellow;}
           <li><a href="#">Calculus</a></li>
         </ul>
     </li>
-    <li>
+    <li class="button">
       <a href="#">Science</a>
       <ul>
         <li><a href="#">Biology</a></li>
