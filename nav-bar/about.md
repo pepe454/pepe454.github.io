@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Our Tutors 
+title: Meet our four tutors 
 permalink: /about/
 ---
 
@@ -24,7 +24,8 @@ permalink: /about/
     </td>
 <!--Tyler's column-->
     <td align="center">
-    <img src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Tyler.png?raw=true"
+    <a href="{{ "/nav-bar/tutor-profiles/Tyler.html" | prepend: site.baseurl }}"><img
+    src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Tyler.png?raw=true"
     height="150px">
     </td>
 <!--Eric's column-->
@@ -33,7 +34,8 @@ permalink: /about/
     </td>
 <!--Akash's column-->
     <td align="center">
-    <img src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/AKash2.JPG?raw=true" height="150px">
+    <a href="{{ "/nav-bar/tutor-profiles/Akash.html" | prepend: site.baseurl }}"><img       src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/AKash2.JPG?raw=true" height="150px">
+    </a>
     </td>
   </tr>
 <!--Third Row--.
