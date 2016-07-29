@@ -26,6 +26,8 @@
 
 .site-nav {
     line-height: 30px;
+    display: inline;
+    text-align: center;
     background-color: #d0ab1b;
     border-top: 2px solid white;
  
@@ -36,8 +38,6 @@
     
     
     .page-link {
-        display: inline;
-        text-align: center;
         margin-left: 40px;
         color: white;
         line-height: $base-line-height;
