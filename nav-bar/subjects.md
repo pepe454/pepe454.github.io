@@ -29,7 +29,7 @@ ul li ul li:hover {background: yellow;}
 .button {
    background-color: white;
    border: none;
-   color: midnightblue;
+   color: blue;
    padding: 14px 60px;
    text-align: center;
    text-decoration: none;
