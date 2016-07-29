@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Meet our four tutors 
+title: Our Tutors 
 permalink: /about/
 ---
 
