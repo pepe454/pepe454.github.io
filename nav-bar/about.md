@@ -24,7 +24,8 @@ permalink: /about/
     </td>
 <!--Tyler's column-->
     <td align="center">
-    <img src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Tyler.png?raw=true">
+    <img src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Tyler.png?raw=true"
+    height="150px">
     </td>
 <!--Eric's column-->
     <td>
