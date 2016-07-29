@@ -1,6 +1,6 @@
 ---
 layout: page
-title: These are the subjects we teach
+title: Subjects
 permalink: /subjects/
 ---
 <html>
