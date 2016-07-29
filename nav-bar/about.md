@@ -19,12 +19,12 @@ permalink: /about/
 <!--Danny's column-->
   <tr>
     <td align="center">
-    <a href="{{ "/nav-bar/tutor-profiles/Danny.html" | prepend: site.baseurl }}"><img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png" height="150px">
+    <a href="{{ "/nav-bar/tutor-profiles/Danny.html" | prepend: site.baseurl }}"><img src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Danny.jpg?raw=true" height="150px">
     </a>
     </td>
 <!--Tyler's column-->
     <td align="center">
-    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/Tyler.png" height="150px">
+    <img src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Tyler.png?raw=true">
     </td>
 <!--Eric's column-->
     <td>
@@ -32,7 +32,7 @@ permalink: /about/
     </td>
 <!--Akash's column-->
     <td align="center">
-    <img src="https://raw.githubusercontent.com/pepe454/pepe454.github.io/master/File_000.png" height="150px">
+    <img src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/AKash2.JPG?raw=true" height="150px">
     </td>
   </tr>
 <!--Third Row--.
