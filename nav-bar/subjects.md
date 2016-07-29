@@ -4,47 +4,6 @@ title: These are the subjects we teach
 permalink: /subjects/
 ---
 <html>
-<head>
-<style>
-div {background-color: black;}
-div a {
-    text-decoration: none;
-    color: midnightblue;
-    font-size: 20px;
-    padding: 15px;
-    display:inline-block;  
-}
-ul {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-ul li {display: inline-block;}
-ul li:hover {background: yellow;}
-ul li:hover ul {display: block;}
-ul li ul {
-  position: absolute;
-  width: 200px;
-  display: none;
-  border-left: 1px;
-  border-right: 1px;
-  border-top: 1px;
-  border-bottom: 1px;
-  border-color: midnightblue;
-}
-ul li ul li {
-  background: white;
-  display: block;
-  border-left: 1px;
-  border-right: 1px;
-  border-top: 1px;
-  border-bottom: 1px;
-  border-color: midnightblue; 
-}
-ul li ul li a {display:block !important;}
-ul li ul li:hover {background: yellow;}
-</style>
-</head>
 <body>
 
 <div>
