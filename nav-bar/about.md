@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Our Tutors 
+title: Meet our four tutors 
 permalink: /about/
 ---
 
@@ -43,7 +43,7 @@ permalink: /about/
 <!--Danny's column-->
   <tr>
     <td>
-    Here we could write a little paragraph about ourselves
+    Science, Math, History, English
     </td>
 <!--Tyler's column-->
     <td>
@@ -55,7 +55,7 @@ permalink: /about/
     </td>
 <!--Akash's column-->
     <td>
-    Here we could write a little paragraph about ourselves
+    Science, Math, History, English
     </td>
   </tr>
 <!--Fourth Row-->
