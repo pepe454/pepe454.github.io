@@ -5,7 +5,7 @@ layout: default
 <!-- Replace values with info  -->
   <header class="post-header">
     <h1>Danny Fryer</h1>
-    <h5>Subjects taught: Spanish, Chemistry, Biology, English, World/ US History, Algebra 1 & 2, Precalculus, Geometry</h5>
+    <h5>Subjects taught: Spanish, Chemistry, Biology, English, World/ US History, Algebra 1 and 2, Precalculus, Geometry</h5>
     <p>17fryerd@gmail.com</p> 
   </header>
   <br>
