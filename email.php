@@ -10,7 +10,7 @@ layout: null
 <body>
   <p> Hello World. </p>
   
-  <p>test PHP:</p>
+  <p>test:</p>
   <?php
   print 2+3;
   ?>
