@@ -8,12 +8,12 @@ permalink: /about/
 
 <table align="center">
 
-<table width="50%" border="1" cellpadding="2" align="center">
+<table width="60%" border="1" cellpadding="2" align="center">
   <tr>
-    <td width="12.5%" align="center"><i>Danny Fryer</i></td>
-    <td width="12.5%" align="center"><i>Tyler Peterson</i></td>
-    <td width="12.5%" align="center"><i>Eric Hilhorst</i></td>
-    <td width="12.5%" align="center"><i>Akash Kaza</i></td>
+    <td width="15%" align="center"><i>Danny Fryer</i></td>
+    <td width="15%" align="center"><i>Tyler Peterson</i></td>
+    <td width="15%" align="center"><i>Eric Hilhorst</i></td>
+    <td width="15%" align="center"><i>Akash Kaza</i></td>
   </tr>
 <!--Second Row-->
 <!--Danny's column-->
@@ -79,7 +79,7 @@ permalink: /about/
   </tr>
 </table>
 
-There may be more tutors to follow
+<p align="center">There may be more tutors to follow</p>
 
 
 
