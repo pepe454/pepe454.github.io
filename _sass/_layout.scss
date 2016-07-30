@@ -211,6 +211,7 @@ table, th, td {
 }
 
 .footer-heading {
+    margin-left: 20px;
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
 }
@@ -235,7 +236,7 @@ table, th, td {
 }
 
 .footer-col-1 {
-    margin-left: 20px;
+    margin-left: 28px;
     width: -webkit-calc(35% - (#{$spacing-unit} / 2));
     width:         calc(35% - (#{$spacing-unit} / 2));
 }
