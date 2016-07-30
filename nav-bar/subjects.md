@@ -11,8 +11,8 @@ ul {
   padding: 0;
 }
 ul li {display: inline-block;}
-ul li:hover {background: yellow;
-             color: midnightblue;}
+ul li:hover {background:#DAA520;
+             color: #191970;}
 ul li:hover ul {display: block;}
 ul li ul {
   position: absolute;
@@ -20,12 +20,12 @@ ul li ul {
   display: none;
 }
 ul li ul li {
-  background: yellow;
-  color: midnightblue;
+  background: #DAA520;
+  color: #191970;
   display: block;
 }
 ul li ul li a {display:block !important;}
-ul li ul li:hover {background: yellow;}
+ul li ul li:hover {background: #DAA520;}
 .button {
    background-color: white;
    border: none;
