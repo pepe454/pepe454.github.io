@@ -6,7 +6,7 @@ permalink: /about/
 
 <h3>Here is a little more information about us</h3>
 
-<table>
+<table align="center">
 
 <table width="50%" border="1" cellpadding="2">
   <tr>
