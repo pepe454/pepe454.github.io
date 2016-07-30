@@ -40,6 +40,8 @@
     
     .page-link {
         margin-left: 10px;
+        margin-right: 10px;
+        border-left: 1px solid white;
         color: white;
         line-height: $base-line-height;
     }
