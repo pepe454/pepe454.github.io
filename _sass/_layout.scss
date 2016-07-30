@@ -14,7 +14,7 @@
     line-height: 80px;
     letter-spacing: -1px;
     color: white;
-    display: inline-block;
+    display: inline;
     text-align: center;
     @include media-query($on-palm) {
       margin-left: 0%;
