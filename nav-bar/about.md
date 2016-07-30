@@ -4,11 +4,11 @@ title: Meet our four tutors
 permalink: /about/
 ---
 
-<h3>Here is a little more information about us</h3>
+<h3 align="center">Here is a little more information about us</h3>
 
 <table align="center">
 
-<table width="50%" border="1" cellpadding="2">
+<table width="50%" border="1" cellpadding="2" align="center">
   <tr>
     <td width="12.5%" align="center"><i>Danny Fryer</i></td>
     <td width="12.5%" align="center"><i>Tyler Peterson</i></td>
