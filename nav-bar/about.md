@@ -8,7 +8,7 @@ permalink: /about/
 
 <table>
 
-<table width="100%" border="1" cellpadding="2">
+<table width="50%" border="1" cellpadding="2">
   <tr>
     <td width="25%" align="center"><i>Danny Fryer</i></td>
     <td width="25%" align="center"><i>Tyler Peterson</i></td>
