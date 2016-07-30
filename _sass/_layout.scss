@@ -31,6 +31,7 @@
     text-align: center;
     background-color: #d0ab1b;
     border-top: 2px solid white;
+    font-size: 0;
  
     
     .menu-icon {
@@ -46,6 +47,7 @@
         margin-right: 0;
         padding: 7px;
         border: 1px solid white;
+        font-size: $base-font-size;
         color: white;
         line-height: $base-line-height;
     }
