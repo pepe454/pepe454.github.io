@@ -31,10 +31,10 @@ permalink: /resources/
         <img class="thumbnail" src="http://balsersbulletin.weebly.com/uploads/3/7/4/6/37466509/713007698.jpg" width= "345px">
       </figure>
       <figure class="gallery-item">
-        <img class="thumbnail" src="http://img.logonews.cn/uploads/2014/04/2014042606562763.png" width= "345px">
+        <img class="thumbnail" src="http://cdn.mos.cms.futurecdn.net/ac23946425a296b37f3dea3daaf5bc90.jpg" width= "345px">
       </figure>
       <figure class="gallery-item">
-        <img class="thumbnail" width= "345px" src="http://static1.squarespace.com/static/50d5cc57e4b0e383f5b1eb34/t/546b963ce4b07f0a5707c14e/1467057114441/?format=1500w">
+        <img class="thumbnail" width= "345px" src="http://bloximages.chicago2.vip.townnews.com/bozemandailychronicle.com/content/tncms/assets/v3/editorial/c/5a/c5a750c2-c03d-11df-9a7d-001cc4c002e0/4c8fd97bcce36.image.jpg">
       </figure>
          <figure class="gallery-item">
         <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/misc-pictures/268bc5d8-73aa-11e5-b075-2eb09c260678_1280x720.jpg?raw=true" width= "345px">
