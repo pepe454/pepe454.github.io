@@ -128,16 +128,23 @@ ul li ul li:hover {background: #DAA520;}
    height: 40px;
 }
  
- .gallery {
+.button-list {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
     margin-left: 23px;
     margin-top: 25px;
- }
+}
  
- .gallery-item{
+.gallery-item{
      margin-right: 55px;
- }
+}
  
  .web-list{
      margin-left: 27px;
@@ -192,7 +199,7 @@ table, th, td {
 /**
  * Posts
  */
-.post-header {
+ .post-header {
     margin-bottom: $spacing-unit;
 }
 
