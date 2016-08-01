@@ -89,11 +89,5 @@ ul li ul li:hover {background: #DAA520;}
         </ul>
     </li>
     <li>
-      
-  </ul>
-</div>
-
-</body>
-</html>
 
 
