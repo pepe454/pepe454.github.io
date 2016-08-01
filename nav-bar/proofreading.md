@@ -6,7 +6,7 @@ permalink: /proofreading/
 <html>
 <body>
   <h1> Directions: </h1>
-  <ol class= "direction-list" type= "I">
+  <ol class= "direction-list" type= "1">
     <li>Go to your email page.</li>
     <li>Click the "compose" button.</li>
     <li>In the "To" box type "simsburytutoringservice@gmail.com"</li> 
