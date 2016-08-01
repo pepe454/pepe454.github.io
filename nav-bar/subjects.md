@@ -7,11 +7,6 @@ permalink: /subjects/
 <html>
 <style>
 
-ul {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
 ul li {display: inline-block;}
 ul li:hover {background:#DAA520;
              color: #191970;}
@@ -31,7 +26,7 @@ ul li ul li {
 <body>
 
 <div>
-  <ul>
+  <ul class="button-list">
     <li class="button">
       <a href="#">Math</a>
         <ul>
