@@ -37,7 +37,7 @@ permalink: /resources/
         <img class="thumbnail" width= "345px" src="http://static1.squarespace.com/static/50d5cc57e4b0e383f5b1eb34/t/546b963ce4b07f0a5707c14e/1467057114441/?format=1500w">
       </figure>
          <figure class="gallery-item">
-        <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/2000px-USA_Connecticut_location_map.svg%20(1).jpg?raw=true" width= "345px">
+        <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/misc-pictures/268bc5d8-73aa-11e5-b075-2eb09c260678_1280x720.jpg?raw=true" width= "345px">
       </figure>
       <figure class="gallery-item">
         <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/talcott-mountain-in-simsbury.jpg?raw=true" width= "345px">
