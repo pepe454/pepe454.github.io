@@ -111,9 +111,9 @@
  */
  
  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 25px;
  }
  
