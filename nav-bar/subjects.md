@@ -3,8 +3,9 @@ layout: page
 title: Subjects
 permalink: /subjects/
 ---
-html 
-body 
+
+<html>
+<style>
 
 ul {
   display: inline;
