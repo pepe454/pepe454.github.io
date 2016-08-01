@@ -8,7 +8,7 @@ permalink: /about/
 
 <table align="center">
 
-<table width="60%" border="1" cellpadding="3px" align="center">
+<table width="60%" border="1" cellpadding="6px" align="center">
   <tr>
     <td width="15%" align="center"><i>Danny Fryer</i></td>
     <td width="15%" align="center"><i>Tyler Peterson</i></td>
@@ -42,19 +42,19 @@ permalink: /about/
 <!--Third Row--.
 <!--Danny's column-->
   <tr>
-    <td width="15%">
+    <td>
     Science, Math, History, English
     </td>
 <!--Tyler's column-->
-    <td width="15%">
+    <td>
     Science, Math, History, English
     </td>
 <!--Eric's column-->
-    <td width="15%">
+    <td>
     Science, Math, History, English, W. Language
     </td>
 <!--Akash's column-->
-    <td width="15%">
+    <td>
     Science, Math, History, English, W. Language
     </td>
   </tr>
