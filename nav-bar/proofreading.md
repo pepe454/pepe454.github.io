@@ -6,7 +6,6 @@ permalink: /proofreading/
 <html>
 <body>
   <h1> Directions: </h1>
-  <br>
   <ol class= "direction-list" type= "I">
     <li>Go to your email page.</li>
     <li>Click the "compose" button.</li>
