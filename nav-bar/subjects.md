@@ -26,22 +26,6 @@ ul li ul li {
   color: #191970;
   display: block;
 }
-ul li ul li a {display:block !important;}
-ul li ul li:hover {background: #DAA520;}
-.button {
-   background-color: #575757;
-   border: none;
-   color: blue;
-   padding: 14px 60px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 12px;
-   border-radius: 6px;
-   margin-right: 10px;
-   max-width: 200px;
-   height: 40px;
-}
 
 </style>
 <body>
