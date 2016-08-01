@@ -28,7 +28,7 @@ permalink: /resources/
 
 <div class="gallery">
       <figure class="gallery-item">
-        <img class="thumbnail" src="http://balsersbulletin.weebly.com/uploads/3/7/4/6/37466509/713007698.jpg" width= "345px">
+        <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/misc-pictures/Khan-Academy1.png?raw=true" width= "345px">
       </figure>
       <figure class="gallery-item">
         <img class="thumbnail" src="http://cdn.mos.cms.futurecdn.net/ac23946425a296b37f3dea3daaf5bc90.jpg" width= "345px">
