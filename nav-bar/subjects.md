@@ -3,6 +3,8 @@ layout: page
 title: Subjects
 permalink: /subjects/
 ---
+html 
+body 
 
 ul {
   display: inline;
@@ -14,8 +16,6 @@ ul li:hover {background:#DAA520;
              color: #191970;}
 ul li:hover ul {display: block;}
 ul li ul {
-  margin-left: auto;
-  margin-right: auto;
   position: absolute;
   width: 200px;
   display: none;
@@ -86,7 +86,7 @@ ul li ul li:hover {background: #DAA520;}
         <ul>
           <li><a href="#">Spanish</a></li>
           <li><a href="#">Dutch</a></li>
-          <li><a href="#">Thelagu</a></li>
+          <li><a href="#">Telugu</a></li>
         </ul>
     </li>
     <li>
