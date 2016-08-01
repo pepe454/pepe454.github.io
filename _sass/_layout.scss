@@ -113,7 +113,9 @@
  .gallery {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
  }
  
  .gallery-item{
