@@ -26,3 +26,23 @@ permalink: /resources/
   </li>
 </ul>
 
+<div class="gallery">
+      <figure class="gallery-item">
+        <img class="thumbnail" src="http://balsersbulletin.weebly.com/uploads/3/7/4/6/37466509/713007698.jpg" width= "345px">
+      </figure>
+      <figure class="gallery-item">
+        <img class="thumbnail" src="http://img.logonews.cn/uploads/2014/04/2014042606562763.png" width= "345px">
+      </figure>
+      <figure class="gallery-item">
+        <img class="thumbnail" width= "345px" src="http://static1.squarespace.com/static/50d5cc57e4b0e383f5b1eb34/t/546b963ce4b07f0a5707c14e/1467057114441/?format=1500w">
+      </figure>
+         <figure class="gallery-item">
+        <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/2000px-USA_Connecticut_location_map.svg%20(1).jpg?raw=true" width= "345px">
+      </figure>
+      <figure class="gallery-item">
+        <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/talcott-mountain-in-simsbury.jpg?raw=true" width= "345px">
+      </figure>
+      <figure class="gallery-item">
+        <img class="thumbnail" width= "345px" src="https://github.com/pepe454/pepe454.github.io/blob/master/201503551422a35d619.jpg?raw=true">
+      </figure>
+  </div>
