@@ -40,9 +40,9 @@ permalink: /resources/
         <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/misc-pictures/268bc5d8-73aa-11e5-b075-2eb09c260678_1280x720.jpg?raw=true" width= "345px">
       </figure>
       <figure class="gallery-item">
-        <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/talcott-mountain-in-simsbury.jpg?raw=true" width= "345px">
+        <img class="thumbnail" src="http://bento.cdn.pbs.org/hostedbento-prod/blog/20150928_204617_144856_crash_course.png" width= "345px">
       </figure>
       <figure class="gallery-item">
-        <img class="thumbnail" width= "345px" src="https://github.com/pepe454/pepe454.github.io/blob/master/201503551422a35d619.jpg?raw=true">
+        <img class="thumbnail" width= "345px" src="http://www.teacheroz.com/images/crashcourse.jpg">
       </figure>
   </div>
