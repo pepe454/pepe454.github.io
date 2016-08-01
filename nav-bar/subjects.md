@@ -3,8 +3,7 @@ layout: page
 title: Subjects
 permalink: /subjects/
 ---
-<html>
-<style>
+
 ul {
   display: inline;
   margin: 0;
@@ -15,6 +14,8 @@ ul li:hover {background:#DAA520;
              color: #191970;}
 ul li:hover ul {display: block;}
 ul li ul {
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   width: 200px;
   display: none;
