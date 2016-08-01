@@ -5,35 +5,17 @@ permalink: /proofreading/
 ---
 <html>
 <body>
-
-<form action="{{ "/email.php" | prepend: site.baseurl }}">
-  <fieldset>
-    <legend>Your Essay:</legend>
-    First name:<br>
-    <input type="text" name="firstname">
-    <br>
-    Last name:<br>
-    <input type="text" name="lastname">
-    <br>
-    Email:<br>
-    <input type="text" name="email">
-    <br>
-    Essay:<br>
-    <textarea name="Text1" 
-              cols="35" 
-              rows="10"
-              style="width:600px; height:350px;">
-    </textarea> 
-    <br><br>
-    <input type="submit" value="Submit">
-  </fieldset>
-</form>
-<table>
- <tr>
-   <td>
-   Hopefully this email thing will work
-   </td>
- </tr>
-</table>
+  <h1> Directions: </h1>
+  <br>
+  <ol class= "direction-list" type= "I">
+    <li>Go to your email page.</li>
+    <li>Click the "compose" button.</li>
+    <li>In the "To" box type "simsburytutoringservice@gmail.com"</li> 
+    <li>In the "Subject" box type your name, followed by "essay"</li>
+    <li>On the bottom left, click the paperclip icon "attach files"</li>
+    <li>Choose the file you want us to proofread and click "open"</li>
+    <li>If you have a rubric for the assignment, attach that file as well.</li>
+    <li>Now you're all done! Hit send and depending on how busy we are we can get it back within a few days.</li>
+  </ol>
 </body>
 </html>
