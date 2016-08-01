@@ -8,7 +8,7 @@ permalink: /about/
 
 <table align="center">
 
-<table width="60%" border="1" cellpadding="2" align="center">
+<table width="60%" border="1" cellpadding="3px" align="center">
   <tr>
     <td width="15%" align="center"><i>Danny Fryer</i></td>
     <td width="15%" align="center"><i>Tyler Peterson</i></td>
@@ -42,40 +42,29 @@ permalink: /about/
 <!--Third Row--.
 <!--Danny's column-->
   <tr>
-    <td>
+    <td width="15%">
     Science, Math, History, English
     </td>
 <!--Tyler's column-->
-    <td>
-    Here we could write a little paragraph about ourselves
+    <td width="15%">
+    Science, Math, History, English
     </td>
 <!--Eric's column-->
-    <td>
-    Here we could write a little paragraph about ourselves
+    <td width="15%">
+    Science, Math, History, English, W. Language
     </td>
 <!--Akash's column-->
-    <td>
-    Science, Math, History, English
+    <td width="15%">
+    Science, Math, History, English, W. Language
     </td>
   </tr>
 <!--Fourth Row-->
 <!--Danny's column-->
   <tr>
-    <td>
-    We can put our best subjects here (the classes we would be best suited to tutor)
-    </td>
-<!--Tyler's column-->
-    <td>
-    We can put our best subjects here (the classes we would be best suited to tutor)
-    </td>
-<!--Eric's column-->
-    <td>
-    We can put our best subjects here (the classes we would be best suited to tutor)
-    </td>
-<!--Akash's column-->
-    <td>
-    We can put our best subjects here (the classes we would be best suited to tutor)
-    </td>
+    <td width="15%" align="center"><i>Next tutor</i></td>
+    <td width="15%" align="center"><i>Next tooter 2</i></td>
+    <td width="15%" align="center"><i>Next tooter 3</i></td>
+    <td width="15%" align="center"><i>Next Tooter 4</i></td>
   </tr>
 </table>
 
