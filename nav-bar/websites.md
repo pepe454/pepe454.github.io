@@ -20,7 +20,7 @@ permalink: /resources/
         <a href="http://www.bozemanscience.com/"> <img class="thumbnail" width= "345px" src="http://bloximages.chicago2.vip.townnews.com/bozemandailychronicle.com/content/tncms/assets/v3/editorial/c/5a/c5a750c2-c03d-11df-9a7d-001cc4c002e0/4c8fd97bcce36.image.jpg">
         </a>
       </figure>
-      <figure class="gallery-item" title="Mrs.Lee Chemistry">
+      <figure class="gallery-item" title="Mrs. Lee Chemistry (YouTube)">
         <a href="https://www.youtube.com/channel/UCkxxijr87O6uZfBVZEu9r7A"> <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/misc-pictures/268bc5d8-73aa-11e5-b075-2eb09c260678_1280x720.jpg?raw=true" width= "345px">
         </a>
       </figure>
