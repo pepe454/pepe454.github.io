@@ -7,7 +7,7 @@ permalink: /resources/
 <h3 class="calendar-title"> These are some helpful resources for your studies.</h3>
 <h5 class="calendar-title"> (click pictures for more info) </h5>
 
-<div class="gallery">
+<div class="gallery-row">
       <figure class="gallery-item" title="Khanacademy">
         <a href="https://www.khanacademy.org/"> <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/misc-pictures/Khan-Academy1.png?raw=true" width= "345px">
         </a>
@@ -20,7 +20,9 @@ permalink: /resources/
         <a href="http://www.bozemanscience.com/"> <img class="thumbnail" width= "345px" src="http://bloximages.chicago2.vip.townnews.com/bozemandailychronicle.com/content/tncms/assets/v3/editorial/c/5a/c5a750c2-c03d-11df-9a7d-001cc4c002e0/4c8fd97bcce36.image.jpg">
         </a>
       </figure>
-      <figure class="gallery-item" title="Mrs. Lee Chemistry (YouTube)">
+</div>
+<div class="gallery-row">
+        <figure class="gallery-item" title="Mrs. Lee Chemistry (YouTube)">
         <a href="https://www.youtube.com/channel/UCkxxijr87O6uZfBVZEu9r7A"> <img class="thumbnail" src="https://github.com/pepe454/pepe454.github.io/blob/master/misc-pictures/268bc5d8-73aa-11e5-b075-2eb09c260678_1280x720.jpg?raw=true" width= "345px">
         </a>
       </figure>
@@ -32,4 +34,4 @@ permalink: /resources/
         <a href="https://www.youtube.com/watch?v=Yocja_N5s1I&list=PLBDA2E52FB1EF80C9"> <img class="thumbnail" width= "345px" src="http://www.teacheroz.com/images/crashcourse.jpg">
         </a>
       </figure>
-  </div>
+</div>
