@@ -129,9 +129,8 @@ ul li ul li:hover {background: #DAA520;}
 }
  
 .button-list {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
   padding: 0;
 }
 
