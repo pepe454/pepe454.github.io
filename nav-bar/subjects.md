@@ -29,7 +29,7 @@ ul li ul li {
 <div>
   <ul class="button-list">
     <li class="button">
-      <a href="#">Maath</a>
+      <a href="#" color=white>Math</a>
         <ul>
           <li><a href="#">Algebra 1</a></li>
           <li><a href="#">Algebra 2</a></li>
