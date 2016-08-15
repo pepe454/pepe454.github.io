@@ -5,6 +5,7 @@ permalink: /proofreading/
 ---
 <html>
 <body>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdyhgYA2_SyFjaleK2Tn6OMHl24wF2ja_EjgnNGjNVJ2Ewreg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
   <h1> Directions: </h1>
   <ol class= "web-list" type= "1">
     <li>Go to your email page.</li>
