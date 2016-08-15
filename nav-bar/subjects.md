@@ -7,10 +7,9 @@ permalink: /subjects/
 <html>
 <style>
 ul li {display: inline-block;}
-ul li:hover {background:#DAA520;
+ul li:hover {background:white;
              color: #191970;}
-ul li:hover ul {display: block;
-                position: absolute;}
+ul li:hover ul {display: block;}
 ul li ul {
   position: absolute;
   width: 200px;
@@ -30,7 +29,7 @@ ul li ul li {
 <div>
   <ul class="button-list">
     <li class="button">
-      <a href="#">Math</a>
+      <a href="#">Maath</a>
         <ul>
           <li><a href="#">Algebra 1</a></li>
           <li><a href="#">Algebra 2</a></li>
