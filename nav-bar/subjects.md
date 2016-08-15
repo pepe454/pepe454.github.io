@@ -6,8 +6,8 @@ permalink: /subjects/
 
 <html>
 <style>
-ul {background: white;}
-ul li {display: inline-block;}
+ul li {display: inline-block;
+       background: white;}
 ul li:hover {background:#DAA520;
              color: #191970;}
 ul li:hover ul {display: block;}
