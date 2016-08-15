@@ -10,8 +10,7 @@ ul li {display: inline-block;}
 ul li:hover {background:#DAA520;
              color: #191970;
              position: absolute;}
-ul li:hover ul {display: block;
-                position: absolute;}
+ul li:hover ul {display: block;}
 ul li ul {
   position: absolute;
   width: 200px;
