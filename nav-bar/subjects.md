@@ -6,8 +6,7 @@ permalink: /subjects/
 
 <html>
 <style>
-ul li {display: inline-block;
-       background: white;}
+ul li {display: inline-block;}
 ul li:hover {background:#DAA520;
              color: #191970;}
 ul li:hover ul {display: block;}
@@ -15,11 +14,13 @@ ul li ul {
   position: absolute;
   width: 200px;
   display: none;
+  background: white;
 }
 ul li ul li {
   background: #DAA520;
   color: #191970;
   display: block;
+  background: white;
 }
 
 </style>
