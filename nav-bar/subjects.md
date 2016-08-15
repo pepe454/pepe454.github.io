@@ -11,7 +11,7 @@ ul li:hover {background:#DAA520;
              color: #191970;}
 ul li:hover ul {display: block;}
 ul li ul {
-  position: relative;
+  position: inherit;
   width: 200px;
   display: none;
   background: white;
@@ -29,7 +29,7 @@ ul li ul li {
 <div>
   <ul class="button-list">
     <li class="button">
-      <a href="#">Maath</a>
+      <a href="#">Math</a>
         <ul>
           <li><a href="#">Algebra 1</a></li>
           <li><a href="#">Algebra 2</a></li>
