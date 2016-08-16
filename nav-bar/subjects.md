@@ -28,9 +28,9 @@ ul li ul li {
 
 <div>
   <ul class="button-list">
-    <li class="button" color=white>
-      <a href="#">Maath</a>
-        <ul>
+    <li class="button">
+      <a href="#">Math</a>
+        <ul color=midnightblue>
           <li><a href="#">Algebra 1</a></li>
           <li><a href="#">Algebra 2</a></li>
           <li><a href="#">Geometry</a></li>
