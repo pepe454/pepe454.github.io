@@ -5,6 +5,7 @@ permalink: /about/
 ---
 
 <h3 align="center">Here is a little more information about us</h3>
+<p align="center">(click pictures for more info)</p>
 
 <table align="center">
 
