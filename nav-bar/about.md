@@ -110,7 +110,6 @@ permalink: /about/
     </td>
   </tr>
 <!--Fourth Row-->
-</table>
 <p align="center">There may be more tutors to follow</p>
 
 
