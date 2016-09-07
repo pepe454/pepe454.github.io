@@ -41,7 +41,7 @@ ul li ul li {
       <a href="#">Science</a>
       <ul>
         <li><a href="#">Biology</a></li>
-        <li><a href="#">Chemistry</a></li>
+        <li><a href="{{ "/nav-bar/Subjectpages/Science/Chemistry.html" | prepend: site.baseurl }}">Chemistry</a></li>
         <li><a href="#">Environmental Science</a></li>
       </ul>
     </li>
