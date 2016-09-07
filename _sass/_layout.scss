@@ -15,7 +15,8 @@
     letter-spacing: -1px;
     color: white;
     display: block;
-    text-align: center;
+    margin-left: 30px;
+    // text-align: center; //
     @include media-query($on-palm) {
       margin-left: 0%;
       text-align: left;   
@@ -28,7 +29,8 @@
 .site-nav {
     line-height: 26px;
     display: block;
-    text-align: center;
+    margin-left: 30px;
+    //text-align: center;//
     background-color: #d0ab1b;
     border-top: 2px solid white;
     font-size: 0;
