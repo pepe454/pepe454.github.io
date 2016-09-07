@@ -47,7 +47,7 @@ ul li ul li {
       </ul>
     </li>
     <li class="button">
-      <a href=""{{ "/nav-bar/Subjectpages/English/Grammar.html" | prepend: site.baseurl }}"">Social Studies</a>
+      <a href="#">Social Studies</a>
         <ul>
           <li><a href="#">U.S. History</a></li>
           <li><a href="#">World History</a></li>
@@ -57,7 +57,7 @@ ul li ul li {
     <li class="button">
       <a href="#">English</a>
         <ul>
-          <li><a href="#">Grammer</a></li>
+          <li><a href="{{ "/nav-bar/Subjectpages/English/Grammar.html" | prepend: site.baseurl }}">Grammer</a></li>
           <li><a href="#">Literature</a></li>
           <li><a href="#">AP Prep</a></li>
         </ul>
