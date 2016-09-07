@@ -40,7 +40,7 @@ ul li ul li {
     <li class="button">
       <a href="#">Science</a>
       <ul>
-        <li><a href="#">Biology</a></li>
+        <li><a href="{{ "/nav-bar/Subjectpages/Science/Biology.html" | prepend: site.baseurl }}">Biology</a></li>
         <!--Akash this is the link -->
         <li><a href="{{ "/nav-bar/Subjectpages/Science/Chemistry.html" | prepend: site.baseurl }}">Chemistry</a></li>
         <li><a href="#">Environmental Science</a></li>
