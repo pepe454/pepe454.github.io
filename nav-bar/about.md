@@ -90,7 +90,7 @@ permalink: /about/
     <p> Next Tutor <p>
     </td>
   </tr>
-<!--Third Row--.
+<!--5th row-->.
 <!--Dan's column-->
   <tr>
     <td>
@@ -109,7 +109,7 @@ permalink: /about/
     Chemistry, Pre-Calculus, Calculus, US History, English
     </td>
   </tr>
-<!--Fourth Row-->
+</table>
 <p align="center">There may be more tutors to follow</p>
 
 
