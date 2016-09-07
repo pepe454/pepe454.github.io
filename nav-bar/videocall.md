@@ -4,4 +4,5 @@ title: Videocall a tutor!
 permalink: /Videocall/
 ---
 
-<p> We don't have the code yet but good things are apt to happen. </p>
+<h1> Directions <h1>
+<iframe src="https://accounts.google.com/ServiceLogin?service=talk&passive=1209600&continue=https://hangouts.google.com/&followup=https://hangouts.google.com/#identifier" width="900" height="675" class="calendar" scrolling="yes"></iframe>
