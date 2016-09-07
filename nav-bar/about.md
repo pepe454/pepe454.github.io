@@ -87,7 +87,7 @@ permalink: /about/
     </td>
 <!--Tutor4's column-->
     <td align="center">
-    <p> Next Tutor <p>
+    <p> Next Tutor </p>
     </td>
   </tr>
 <!--5th row-->.
