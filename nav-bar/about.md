@@ -107,10 +107,7 @@ permalink: /about/
 <!--Tutor4's column-->
     <td>
     Chemistry, Pre-Calculus, Calculus, US History, English
-    </td>
-  </tr>
-<!--Fourth Row-->
-</table>
+
 
 <p align="center">There may be more tutors to follow</p>
 
