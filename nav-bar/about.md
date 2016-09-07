@@ -26,7 +26,7 @@ permalink: /about/
 <!--Tyler's column-->
     <td align="center">
     <a href="{{ "/nav-bar/tutor-profiles/Tyler.html" | prepend: site.baseurl }}"><img
-    src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Tyler.png?raw=true"
+    src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Tyla.png?raw=true"
     height="150px">
     </a>
     </td>
