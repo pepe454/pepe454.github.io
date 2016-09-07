@@ -62,7 +62,7 @@ permalink: /about/
 <!--Danny's column-->
   <tr>
     <td width="15%" align="center"><i>Next tutor</i></td>
-    <td width="15%" align="center"><i>Next tooter 2</i></td>
+    <td width="15%" align="center"><i>Neter 2</i></td>
     <td width="15%" align="center"><i>Next tooter 3</i></td>
     <td width="15%" align="center"><i>Next Tooter 4</i></td>
   </tr>
