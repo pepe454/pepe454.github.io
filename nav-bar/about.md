@@ -32,7 +32,6 @@ permalink: /about/
     </td>
 <!--Eric's column-->
     <td>
-    He's cool
     </td>
 <!--Akash's column-->
     <td align="center">
