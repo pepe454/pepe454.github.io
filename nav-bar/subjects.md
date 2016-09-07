@@ -7,20 +7,20 @@ permalink: /subjects/
 <html>
 <style>
 ul li {display: inline-block;}
-ul li:hover {background:white;
+ul li:hover {background:#191970;
              color: #191970;}
 ul li:hover ul {display: block;}
 ul li ul {
   position: absolute;
   width: 200px;
   display: none;
-  background: white;
+  background: #191970;
 }
 ul li ul li {
   background: #DAA520;
-  color: #191970;
+  color: white;
   display: block;
-  background: white;
+  background: #191970;
 }
 
 </style>
