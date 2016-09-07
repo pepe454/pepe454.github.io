@@ -43,7 +43,7 @@ permalink: /about/
 <!--Danny's column-->
   <tr>
     <td>
-    Science, Math, History, English
+    Biology, Math, US History, English, Spanish
     </td>
 <!--Tyler's column-->
     <td>
@@ -51,11 +51,11 @@ permalink: /about/
     </td>
 <!--Eric's column-->
     <td>
-    Science, Math, History, English, W. Language
+    Science, Math, History, English
     </td>
 <!--Akash's column-->
     <td>
-    Science, Math, History, English, W. Language
+    Chemistry, Pre-Calculus, Calculus, US History, English
     </td>
   </tr>
 <!--Fourth Row-->
