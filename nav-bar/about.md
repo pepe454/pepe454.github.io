@@ -6,9 +6,7 @@ permalink: /about/
 
 <h3 align="center">Here is a little more information about us</h3>
 <p align="center">(click pictures for more info)</p>
-
 <table align="center">
-
 <table width="60%" border="1" cellpadding="6px" align="center">
   <tr>
     <td width="15%" align="center"><i>Danny Fryer</i></td>
