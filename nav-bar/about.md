@@ -31,7 +31,7 @@ permalink: /about/
     </a>
     </td>
 <!--Eric's column-->
-    <td>
+    <td align="center">
     <a href="{{ "/nav-bar/tutor-profiles/Eric.html" | prepend: site.baseurl }}"> <img src=
     "https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/eric.jpg?raw=true" height= "150px">
     </a>
@@ -62,13 +62,57 @@ permalink: /about/
     </td>
   </tr>
 <!--Fourth Row-->
-<!--Danny's column-->
   <tr>
     <td width="15%" align="center"><i>Dan Peluso</i></td>
     <td width="15%" align="center"><i>Alex Mueller</i></td>
     <td width="15%" align="center"><i>Next tutor</i></td>
     <td width="15%" align="center"><i>Next tutor</i></td>
   </tr>
+  <!--Dan's column-->
+  <tr>
+    <td align="center">
+    <a href="{{ "/nav-bar/tutor-profiles/Danny.html" | prepend: site.baseurl }}"><img src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Danny.jpg?raw=true" height="150px">
+    </a>
+    </td>
+<!--Alex's column-->
+    <td align="center">
+    <a href="{{ "/nav-bar/tutor-profiles/Tyler.html" | prepend: site.baseurl }}"><img
+    src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Tyla.png?raw=true"
+    height="150px">
+    </a>
+    </td>
+<!--Tutor 3's column-->
+    <td align="center">
+    <a href="{{ "/nav-bar/tutor-profiles/Eric.html" | prepend: site.baseurl }}"> <img src=
+    "https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/eric.jpg?raw=true" height= "150px">
+    </a>
+    </td>
+<!--Tutor4's column-->
+    <td align="center">
+    <a href="{{ "/nav-bar/tutor-profiles/Akash.html" | prepend: site.baseurl }}"><img       src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/AKash2.JPG?raw=true" height="150px">
+    </a>
+    </td>
+  </tr>
+<!--Third Row--.
+<!--Dan's column-->
+  <tr>
+    <td>
+    Business
+    </td>
+<!--Alex's column-->
+    <td>
+    Comp Sci
+    </td>
+<!--Tutor3's column-->
+    <td>
+    Science, Math, History, English
+    </td>
+<!--Tutor4's column-->
+    <td>
+    Chemistry, Pre-Calculus, Calculus, US History, English
+    </td>
+  </tr>
+<!--Fourth Row-->
 </table>
 
 <p align="center">There may be more tutors to follow</p>
