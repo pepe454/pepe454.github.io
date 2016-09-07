@@ -71,26 +71,23 @@ permalink: /about/
   <!--Dan's column-->
   <tr>
     <td align="center">
-    <a href="{{ "/nav-bar/tutor-profiles/Danny.html" | prepend: site.baseurl }}"><img src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Danny.jpg?raw=true" height="150px">
+    <a href="{{ "/nav-bar/tutor-profiles/DanP.html" | prepend: site.baseurl }}"><img src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/dan.jpg?raw=true" height="150px">
     </a>
     </td>
 <!--Alex's column-->
     <td align="center">
-    <a href="{{ "/nav-bar/tutor-profiles/Tyler.html" | prepend: site.baseurl }}"><img
-    src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/Tyla.png?raw=true"
+    <a href="{{ "/nav-bar/tutor-profiles/Alex.html" | prepend: site.baseurl }}"><img
+    src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/alexm.jpg?raw=true"
     height="150px">
     </a>
     </td>
 <!--Tutor 3's column-->
     <td align="center">
-    <a href="{{ "/nav-bar/tutor-profiles/Eric.html" | prepend: site.baseurl }}"> <img src=
-    "https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/eric.jpg?raw=true" height= "150px">
-    </a>
+    <p> Next Tutor <p>
     </td>
 <!--Tutor4's column-->
     <td align="center">
-    <a href="{{ "/nav-bar/tutor-profiles/Akash.html" | prepend: site.baseurl }}"><img       src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/AKash2.JPG?raw=true" height="150px">
-    </a>
+    <p> Next Tutor <p>
     </td>
   </tr>
 <!--Third Row--.
