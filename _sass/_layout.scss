@@ -29,7 +29,7 @@
 .site-nav {
     line-height: 26px;
     display: block;
-    margin-left: 30px;
+    margin-left: 0px;
     //text-align: center;//
     background-color: #d0ab1b;
     border-top: 2px solid white;
@@ -46,6 +46,9 @@
         background-color: #d0ab1b;
         display: inline-block;
         border-right: 1px solid white;
+        &: first-child{
+          margin-left: 21px;
+        }
         &:last-child{
           border: 0;
         }
