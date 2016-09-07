@@ -32,6 +32,9 @@ permalink: /about/
     </td>
 <!--Eric's column-->
     <td>
+    <a href="{{ "/nav-bar/tutor-profiles/Eric.html" | prepend: site.baseurl }}"> <img src=
+    "https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/eric.jpg?raw=true" height= "150px">
+    </a>
     </td>
 <!--Akash's column-->
     <td align="center">
@@ -43,7 +46,7 @@ permalink: /about/
 <!--Danny's column-->
   <tr>
     <td>
-    Science, Math, History, English, World Language
+    Biology, Math, US History, English, Spanish
     </td>
 <!--Tyler's column-->
     <td>
@@ -55,16 +58,16 @@ permalink: /about/
     </td>
 <!--Akash's column-->
     <td>
-    Science, Math, History, English
+    Chemistry, Pre-Calculus, Calculus, US History, English
     </td>
   </tr>
 <!--Fourth Row-->
 <!--Danny's column-->
   <tr>
+    <td width="15%" align="center"><i>Dan Peluso</i></td>
+    <td width="15%" align="center"><i>Alex Mueller</i></td>
     <td width="15%" align="center"><i>Next tutor</i></td>
-    <td width="15%" align="center"><i>Neter 2</i></td>
-    <td width="15%" align="center"><i>Next tooter 3</i></td>
-    <td width="15%" align="center"><i>Next Tooter 4</i></td>
+    <td width="15%" align="center"><i>Next tutor</i></td>
   </tr>
 </table>
 
