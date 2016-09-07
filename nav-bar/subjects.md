@@ -50,23 +50,21 @@ ul li ul li {
         <ul>
           <li><a href="#">U.S. History</a></li>
           <li><a href="#">World History</a></li>
-          <li><a href="#">Government</a></li>
+          <li><a href="#">Government and Civics</a></li>
         </ul>
     </li>
     <li class="button">
       <a href="#">English</a>
         <ul>
           <li><a href="#">Grammer</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Literature</a></li>
+          <li><a href="#">AP Prep</a></li>
         </ul>
     </li>
     <li class="button">
       <a href="#">W. Language</a>
         <ul>
           <li><a href="#">Spanish</a></li>
-          <li><a href="#">Dutch</a></li>
-          <li><a href="#">Telugu</a></li>
         </ul>
     </li>
     <li>
