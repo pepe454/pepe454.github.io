@@ -63,7 +63,7 @@ permalink: /about/
   <tr>
     <td width="15%" align="center"><i>Dan Peluso</i></td>
     <td width="15%" align="center"><i>Alex Mueller</i></td>
-    <td width="15%" align="center"><i>Next tutor</i></td>
+    <td width="15%" align="center"><i>Evan Palmberg</i></td>
     <td width="15%" align="center"><i>Next tutor</i></td>
   </tr>
   <!--Dan's column-->
@@ -79,9 +79,11 @@ permalink: /about/
     height="150px">
     </a>
     </td>
-<!--Tutor 3's column-->
+<!--Evan's column-->
     <td align="center">
-    <p> Next Tutor </p>
+    <a href="{{ "/nav-bar/tutor-profiles/Ebuh.html" | prepend: site.baseurl }}"><img
+    src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/ebuh.jpg?raw=true"
+    height="150px">
     </td>
 <!--Tutor4's column-->
     <td align="center">
