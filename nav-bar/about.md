@@ -84,6 +84,7 @@ permalink: /about/
     <a href="{{ "/nav-bar/tutor-profiles/Ebuh.html" | prepend: site.baseurl }}"><img
     src="https://github.com/pepe454/pepe454.github.io/blob/master/nav-bar/tutor-profiles/tutor-pictures/ebuh.jpg?raw=true"
     height="150px">
+    </a>
     </td>
 <!--Tutor4's column-->
     <td align="center">
