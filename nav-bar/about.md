@@ -102,7 +102,7 @@ permalink: /about/
     </td>
 <!--Evan's column-->
     <td>
-    History, Business
+    <p> History, Business </p>
     </td>
 <!--Tutor4's column-->
     <td>
