@@ -44,7 +44,7 @@ permalink: /about/
 <!--Danny's column-->
   <tr>
     <td>
-    Biology, Math, US History, English, Spanish
+    Science, Math, History, English, Spanish
     </td>
 <!--Tyler's column-->
     <td>
@@ -56,7 +56,7 @@ permalink: /about/
     </td>
 <!--Akash's column-->
     <td>
-    Chemistry, Pre-Calculus, Calculus, US History, English
+    Science, Math, History, English
     </td>
   </tr>
 <!--Fourth Row-->
