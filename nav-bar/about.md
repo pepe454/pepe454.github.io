@@ -100,9 +100,9 @@ permalink: /about/
     <td>
     Comp Sci
     </td>
-<!--Tutor3's column-->
+<!--Evan's column-->
     <td>
-    Science, Math, History, English
+    History, Business
     </td>
 <!--Tutor4's column-->
     <td>
