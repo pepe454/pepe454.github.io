@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Schedule an appt. 
+title: Scheduling 
 permalink: /schedule/
 ---
 <iframe src="https://goo.gl/forms/eS3Vhpo6gfXTttQ72" width="900" height="675" class="calendar" scrolling="yes"></iframe>
