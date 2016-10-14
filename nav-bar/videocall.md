@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Videocall a tutor! 
+title: Videocall 
 permalink: /Videocall/
 ---
 
