@@ -28,7 +28,7 @@ ul li ul li {
 <div>
   <ul class="button-list">
     <li class="button">
-      <p>Math</p>
+      Math
         <ul>
           <li>Algebra 1</li>
           <li>Algebra 2</li>
@@ -38,7 +38,7 @@ ul li ul li {
         </ul>
     </li>
     <li class="button">
-      <p>Science<p>
+      <a href="#">Science</a>
       <ul>
         <li>Biology</li>       
         <li>Chemistry</li>
