@@ -25,6 +25,7 @@ ul li ul li {
 </style>
 <body>
 
+<h3 class = "calendar-title">These are the subjects we teach</h3>
 <div>
   <ul class="button-list">
     <li class="button">
