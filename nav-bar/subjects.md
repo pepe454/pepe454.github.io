@@ -69,7 +69,7 @@ ul li ul li {
     </li>
     <li>
     
-    
+  <br>
 <h3 class="calendar-title"> These are some helpful resources for your studies.</h3>
 <h5 class="calendar-title"> (click pictures for more info) </h5>
 
