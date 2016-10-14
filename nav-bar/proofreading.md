@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Send us your Paper to Proofread!
+title: Proofreading
 permalink: /proofreading/
 ---
 <html>
