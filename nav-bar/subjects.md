@@ -28,22 +28,21 @@ ul li ul li {
 <div>
   <ul class="button-list">
     <li class="button">
-      <a href="#">Math</a>
+      <p>Math</p>
         <ul>
-          <li><a href="#">Algebra 1</a></li>
-          <li><a href="#">Algebra 2</a></li>
-          <li><a href="#">Geometry</a></li>
-          <li><a href="#">Pre Calculus</a></li>
-          <li><a href="#">Calculus</a></li>
+          <li>Algebra 1</li>
+          <li>Algebra 2</li>
+          <li>Geometry</li>
+          <li>Pre Calculus</li>
+          <li>Calculus</li>
         </ul>
     </li>
     <li class="button">
-      <a href="#">Science</a>
+      <p>Science<p>
       <ul>
-        <li><a href="{{ "/nav-bar/Subjectpages/Science/Biology.html" | prepend: site.baseurl }}">Biology</a></li>
-        <!--Akash this is the link -->
-        <li><a href="{{ "/nav-bar/Subjectpages/Science/Chemistry.html" | prepend: site.baseurl }}">Chemistry</a></li>
-        <li><a href="#">Environmental Science</a></li>
+        <li>Biology</li>       
+        <li>Chemistry</li>
+        <li>Environmental Science</li>
       </ul>
     </li>
     <li class="button">
@@ -57,9 +56,9 @@ ul li ul li {
     <li class="button">
       <a href="#">English</a>
         <ul>
-          <li><a href="{{ "/nav-bar/Subjectpages/English/Grammar.html" | prepend: site.baseurl }}">Grammer</a></li>
-          <li><a href="#">Literature</a></li>
-          <li><a href="#">AP Prep</a></li>
+          <li>Grammer</li>
+          <li>Literature</li>
+          <li>AP Prep</li>
         </ul>
     </li>
     <li class="button">
