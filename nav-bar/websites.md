@@ -1,9 +1,11 @@
+<!--
 ---
 layout: page
 title: Other Free Resources
 permalink: /resources/
 ---
-<!--This page controls what happens after the Helpful Free Websites link is clicked-->
+
+This page controls what happens after the Helpful Free Websites link is clicked -->
 <h3 class="calendar-title"> These are some helpful resources for your studies.</h3>
 <h5 class="calendar-title"> (click pictures for more info) </h5>
 
