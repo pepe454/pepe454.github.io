@@ -1,8 +1,10 @@
+<!--
 ---
 layout: page
 title: Meet our tutors 
 permalink: /about/
 ---
+-->
 <h3 align="center">Here is a little more information about us</h3>
 <table align="center">
 <table width="60%" border="1" cellpadding="6px" align="center">
