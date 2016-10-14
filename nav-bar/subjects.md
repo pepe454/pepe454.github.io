@@ -72,7 +72,8 @@ ul li ul li {
 </div>
     
 <br>
-<h3 class="calendar-title"> These are some helpful resources for your studies.</h3>
+<br>
+<h3 class="calendar-title"> Here are some helpful resources for your studies.</h3>
 <h5 class="calendar-title"> (click pictures for more info) </h5>
 
 <div class="gallery-row">
