@@ -1,8 +1,10 @@
+<!--
 ---
 layout: page
 title: Videocall 
 permalink: /Videocall/
 ---
+-->
 
 <h1> Directions <h1>
 <ol class = "web-list"> 
