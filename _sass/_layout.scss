@@ -48,9 +48,10 @@
         line-height: 26px;
         background-color: #d0ab1b;
         display: inline-block;
-        border-right: 1px solid white;        
-        &:last-child{
-          margin-right: -10%;
+        border-right: 1px solid white; 
+        margin-right: 10%;
+        margin-left: -5%;
+        &:last-child{          
           border: 0;
         }
         padding: 9px;
