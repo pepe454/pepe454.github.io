@@ -33,7 +33,7 @@
     background-color: #d0ab1b;
     border-bottom: 15px solid #5E501A;    
     font-size: 0;
- 
+    font-family: Georgia;
     
     .menu-icon {
         display: none;
@@ -41,7 +41,7 @@
     
     .home-link {
         font-size: 25px;
-        font-family: Georgia; 
+         
         color: white;
         margin-right: 50%
     }
@@ -163,6 +163,7 @@ ul li ul li:hover {background: #DAA520;}
  }
  
 .page-content {
+    margin-top: 3%;
     margin-left: 10%;
     margin-right: 10%;
 }
