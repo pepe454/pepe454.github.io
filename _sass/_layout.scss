@@ -42,15 +42,15 @@
     .home-link {
         font-size: 25px;
         color: white;
-        margin-right: 75%
+        margin-right: 80%
     }
     .page-link {
         line-height: 26px;
         background-color: #d0ab1b;
         display: inline-block;
-        border-right: 1px solid white;
+        border-right: 1px solid white;        
         &:last-child{
-          right-margin: 15%;
+          margin-right: 15%;
           border: 0;
         }
         padding: 9px;
