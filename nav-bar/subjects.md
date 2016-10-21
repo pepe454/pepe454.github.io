@@ -49,9 +49,9 @@ ul li ul li {
     <li class="button">
       <a href="#">Social Studies</a>
         <ul>
-          <li><a href="#">U.S. History</a></li>
-          <li><a href="#">World History</a></li>
-          <li><a href="#">Government and Civics</a></li>
+          <li>U.S. History</li>
+          <li>World History</li>
+          <li>Government and Civics</li>
         </ul>
     </li>
     <li class="button">
@@ -65,7 +65,7 @@ ul li ul li {
     <li class="button">
       <a href="#">W. Language</a>
         <ul>
-          <li><a href="#">Spanish</a></li>
+          <li>Spanish</li>
         </ul>
     </li>
   </ul>
