@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Deep Fried Code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2026 10:53:44 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 12:18:14 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Fri, 05 Jun 2026 12:18:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>&lt;p&gt;This is my test post, does hugo finally work with it now?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
