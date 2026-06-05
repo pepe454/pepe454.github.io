@@ -1,9 +1,16 @@
 baseURL = 'https://deepfriedcode.blog/'
 languageCode = 'en-us'
 title = 'Deep Fried Code'
-theme = "PaperMod"
+theme = 'PaperMod'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
 
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+

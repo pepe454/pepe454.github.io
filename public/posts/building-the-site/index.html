@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Building the Site | Deep Fried Code</title>
+<meta name="keywords" content="">
+<meta name="description" content="Step 1: Setting Up Hugo
+Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support.
+Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.
+Installing hugo and setting up the site
+First, get hugo for ubuntu.
+$ sudo apt install hugo
+Next, I setup the project directory and generated the skeleton using hugo:">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/building-the-site/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6ff46447b1fa3f8a5cc0bcae48088decc3ae37f5fbc99406a3aefc3bf0e6044a.css" integrity="sha256-b/RkR7H6P4pcwLyuSAiN7MOuN/X7yZQGo678O/DmBEo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/building-the-site/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Deep Fried Code (Alt + H)">Deep Fried Code</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Building the Site
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-06-05 14:51:13 -0400 EDT'>June 5, 2026</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><h2 id="step-1-setting-up-hugo">Step 1: Setting Up Hugo<a hidden class="anchor" aria-hidden="true" href="#step-1-setting-up-hugo">#</a></h2>
+<p>Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support.
+Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.</p>
+<h4 id="installing-hugo-and-setting-up-the-site">Installing hugo and setting up the site<a hidden class="anchor" aria-hidden="true" href="#installing-hugo-and-setting-up-the-site">#</a></h4>
+<p>First, get hugo for ubuntu.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install hugo
+</span></span></code></pre></div><p>Next, I setup the project directory and generated the skeleton using hugo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo new site deepfriedcode.blog
+</span></span></code></pre></div><p>This put all the skeleton in place. However, my site had no content or theming! If we run the server now, we will get a Page not found:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd deepfriedcode.blog
+</span></span><span style="display:flex;"><span>$ hugo server
+</span></span></code></pre></div><img loading="lazy" src="/posts/building-the-site/Page-Not-Found.png"><p>Now let&rsquo;s add our first post and see if it works:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo new posts/first-post.md
+</span></span></code></pre></div><p>This creates a new markdown file in the content/posts directory. However, we still end up getting a blank page when we use hugo server. This is because we have not added a theme yet.</p>
+<h4 id="adding-the-theme">Adding the theme<a hidden class="anchor" aria-hidden="true" href="#adding-the-theme">#</a></h4>
+<p>Let&rsquo;s add a theme to give a layout and structure to the website. I&rsquo;m using the PaperMod theme, so let&rsquo;s add it now. First, add the theme as a submodule, which will clone the repository for the theme into your themes subfolder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git submodule add --depth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 
+</span></span></code></pre></div><p>Now we need to configure the site. I edited the hugo.toml file like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>baseURL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://deepfriedcode.blog/&#39;</span>
+</span></span><span style="display:flex;"><span>languageCode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;en-us&#39;</span>
+</span></span><span style="display:flex;"><span>title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Deep Fried Code&#39;</span>
+</span></span><span style="display:flex;"><span>theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;PaperMod&#39;</span>
+</span></span></code></pre></div><p>Run the server again. This time, add the <code>-D</code> flag, which includes draft posts. These are posts that don&rsquo;t get built into your site in production.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo server -D
+</span></span></code></pre></div><p>It&rsquo;s alive!
+<img loading="lazy" src="/posts/building-the-site/Site-Built.png"></p>
+<h2 id="step-2-deploying-to-github">Step 2: Deploying to github<a hidden class="anchor" aria-hidden="true" href="#step-2-deploying-to-github">#</a></h2>
+<p>Follow the instructions at this post: <a href="https://gohugo.io/host-and-deploy/host-on-github-pages/">Host on GitHub Pages</a>
+You will need to setup the actions workflow to build the site and deploy it to github pages.</p>
+<p>Once you have added the github workflow, it should build automatically when you commit push to github. great. Now, it&rsquo;s time to configure your repo.</p>
+<p>In your repo &gt; settings &gt; Pages (under Code and Automation), select &ldquo;Github Actions&rdquo; as your source for the build and deployment:
+<img loading="lazy" src="/posts/building-the-site/Github-Build-Deployment.png" title="Github Pages Build Deployment">
+If you have a custom domain like I do, you will need to put in your custom domain name like so:
+<img loading="lazy" src="/posts/building-the-site/Github-Custom-Domain.png" title="Github Pages Custom domain"></p>
+<p><em>The custom domain will fail on the initial setup</em>. Don&rsquo;t worry! This is all part of it. Now we have to register our domain and have the DNS records point to the github site.</p>
+<h2 id="step-3-registering-the-domain">Step 3: Registering the domain<a hidden class="anchor" aria-hidden="true" href="#step-3-registering-the-domain">#</a></h2>
+<p>Now that we&rsquo;ve got our github pages setup and the website is built, it&rsquo;s time to register a custom domain. I chose cloudflare, because I am familiar with it and have used it before. You can purchase a domain name here: <a href="https://www.cloudflare.com/products/registrar/">Cloudflare Registrar</a></p>
+<p>Once you&rsquo;ve gone and puchased the domain for your site, it&rsquo;s time to configure DNS. I followed this guide from Github on how to point DNS records for your custom domain to the github hosted site: <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site</a>. However, you can follow my instructions below and it should turn out just fine.</p>
+<p>This part took a little bit of trial and error for me, but if you follow my example it should be very straightforward. In order to configure DNS Records in cloudflare, on the left drawer in the cloudflare portal, go to DNS &gt; Records.</p>
+<p>Now configure the A-name records. This will point the custom domain for your site to the github ipv4 addresses. Since there are multiple ipv4 addresses listed, you will need to create an A-name record for each one. In addition, assuming you&rsquo;re using the root of your custom domain, use the <code>@</code> symbol to reference that instead of a string. This is what your dashboard should look like after adding the A-name records:
+<img loading="lazy" src="/posts/building-the-site/Cloudflare-A-name.png" title="Cloudflare A-name records"></p>
+<p>Next, you can add the ipv6 addresses using AAAA-name records:
+<img loading="lazy" src="/posts/building-the-site/Cloudflare-AAAA-name.png" title="Cloudflare AAAA-name records"></p>
+<p>Finally, we can have the www.<!-- raw HTML omitted --> also point as an alias to your custom domain. This will let www url&rsquo;s alias to your domain:
+<img loading="lazy" src="/posts/building-the-site/Cloudflare-CNAME.png" title="Cloudflare CNAME record"></p>
+<p>After configuring the DNS Records, we want clients to use HTTPS instead of HTTP. This is a simple blog site, so HTTPS doesn&rsquo;t really matter, but browsers will users a warning for sites that use HTTP. On the left drawer, go to Rules &gt; Page Rules. You can add a rule that will force clients to use HTTPS:
+<img loading="lazy" src="/posts/building-the-site/Cloudflare-HTTPS-Rule.png" title="Cloudflare HTTPS Rule"></p>
+<p>We can also leverage Cloudflare&rsquo;s CDN to cache our site for better performance, by serving content in data centers closer to users:
+<img loading="lazy" src="/posts/building-the-site/Cloudflare-Cache-Rule.png" title="Cloudflare Cache Rule"></p>
+<h2 id="step-4-add-content-and-redeploy">Step 4: Add content and redeploy<a hidden class="anchor" aria-hidden="true" href="#step-4-add-content-and-redeploy">#</a></h2>
+<p>Ok! We&rsquo;ve set up the website. We wrote our first markdown blog post. We pushed it to github. We configured github pages. We bought a domain name. We configured dns to point to github pages. Phew. That was a lot! I&rsquo;m tired just typing that all out!</p>
+<p>Once we have a github pages site, we should actually add some content. Open that first-post.md file up, and add some content. It&rsquo;s time to deploy. You also need to set draft=False on the front matter. This will actually build the page when you run hugo build. Finally, we can build to generate the HTML from .md files:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo build
+</span></span></code></pre></div><p>That should add a bunch of files in the <code>./public</code> directory in your project root. Go ahead and commit and push to github. Our site should start building automatically now. While that&rsquo;s happening, you can check on the custom domain settings. For me, this didn&rsquo;t work at first, because I had to configure cloudflare. After doing so, you should be able to retry adding your custom domain. If all goes well, you will get the fabled green checkmark and your site will be live on your custom domain:
+<img loading="lazy" src="/posts/building-the-site/Github-Great-Success!.png" title="Github DNS Check Successful"></p>
+<p>Navigate to your custom domain on the browser, et voilà! Your site is live!</p>
+<h2 id="recap">Recap<a hidden class="anchor" aria-hidden="true" href="#recap">#</a></h2>
+<p>I hope this guide was helpful for you and you were able to setup your website successfully. Using hugo, a prebuilt theme like PaperMod, hosting on Github pages, and using Cloudflare DNS are all surefire ways to make this process as easy as possible.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Deep Fried Code</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

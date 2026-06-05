@@ -6,23 +6,20 @@
     <description>Recent content in Posts on Deep Fried Code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2026 12:18:14 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 14:51:13 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello World</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
-      <pubDate>Fri, 05 Jun 2026 12:18:14 -0400</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>&lt;p&gt;This is my test post, does hugo finally work with it now?&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Fri, 05 Jun 2026 10:53:44 -0400</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+      <title>Building the Site</title>
+      <link>http://localhost:1313/posts/building-the-site/</link>
+      <pubDate>Fri, 05 Jun 2026 14:51:13 -0400</pubDate>
+      <guid>http://localhost:1313/posts/building-the-site/</guid>
+      <description>&lt;h2 id=&#34;step-1-setting-up-hugo&#34;&gt;Step 1: Setting Up Hugo&lt;/h2&gt;
+&lt;p&gt;Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support.
+Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.&lt;/p&gt;
+&lt;h4 id=&#34;installing-hugo-and-setting-up-the-site&#34;&gt;Installing hugo and setting up the site&lt;/h4&gt;
+&lt;p&gt;First, get hugo for ubuntu.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next, I setup the project directory and generated the skeleton using hugo:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
