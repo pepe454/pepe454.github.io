@@ -9,8 +9,9 @@ theme = 'PaperMod'
       wrapStandAloneImageWithinParagraph = false
       [markup.goldmark.parser.attribute]
         block = true
+      [markup.goldmark.renderHooks.link]
+        enableDefault = true
 
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
-

@@ -2,23 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Deep Fried Code</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://deepfriedcode.blog/posts/</link>
     <description>Recent content in Posts on Deep Fried Code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2026 14:51:13 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jun 2026 17:03:24 -0400</lastBuildDate>
+    <atom:link href="https://deepfriedcode.blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Favorite VS Code Keybindings</title>
+      <link>https://deepfriedcode.blog/posts/my-favorite-vscode-keybindings/</link>
+      <pubDate>Fri, 05 Jun 2026 17:03:24 -0400</pubDate>
+      <guid>https://deepfriedcode.blog/posts/my-favorite-vscode-keybindings/</guid>
+      <description>&lt;p&gt;Everyone developer has their secret sauce for making their environment as comfortable and ergonomic as possible. Over time you will figure out which commands just &lt;em&gt;click&lt;/em&gt; for you and you can map these to easy keyboard shortcuts. Over my 8 years as a developer, here are some of the commands I&amp;rsquo;ve built up over the years to make editing text, moving windows, navigating the editor, and running commands a breeze in VS Code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Love Letter to Vim</title>
+      <link>https://deepfriedcode.blog/posts/a-love-letter-to-vim/</link>
+      <pubDate>Fri, 05 Jun 2026 16:12:16 -0400</pubDate>
+      <guid>https://deepfriedcode.blog/posts/a-love-letter-to-vim/</guid>
+      <description>&lt;p&gt;I love Vim. I seriously do. So much so, in fact, that going back to regular text editing on coworker&amp;rsquo;s machines feels like I am 50% as productive otherwise. What makes Vim so effective? The answer is natural keybindings for the most common tasks while writing text. You can use it for writing any text, whether it be code, config files, markdown files, or any plain text you&amp;rsquo;re working on. When you first start out, it will be awkward. There&amp;rsquo;s no getting around that. However, once you&amp;rsquo;ve built up the muscle memory after a couple of days, using Vim will feel like second nature.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Building the Site</title>
-      <link>http://localhost:1313/posts/building-the-site/</link>
+      <link>https://deepfriedcode.blog/posts/building-the-site/</link>
       <pubDate>Fri, 05 Jun 2026 14:51:13 -0400</pubDate>
-      <guid>http://localhost:1313/posts/building-the-site/</guid>
+      <guid>https://deepfriedcode.blog/posts/building-the-site/</guid>
       <description>&lt;h2 id=&#34;step-1-setting-up-hugo&#34;&gt;Step 1: Setting Up Hugo&lt;/h2&gt;
 &lt;p&gt;Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support.
 Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.&lt;/p&gt;
 &lt;h4 id=&#34;installing-hugo-and-setting-up-the-site&#34;&gt;Installing hugo and setting up the site&lt;/h4&gt;
 &lt;p&gt;First, get hugo for ubuntu.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install hugo
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo apt install hugo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next, I setup the project directory and generated the skeleton using hugo:&lt;/p&gt;</description>
     </item>
   </channel>
