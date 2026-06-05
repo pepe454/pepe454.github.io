@@ -1,4 +1,4 @@
-baseURL = 'https://www.deepfriedcode.blog/'
+baseURL = 'https://deepfriedcode.blog/'
 languageCode = 'en-us'
 title = 'Deep Fried Code'
 theme = "PaperMod"
