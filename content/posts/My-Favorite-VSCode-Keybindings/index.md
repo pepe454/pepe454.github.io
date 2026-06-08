@@ -2,6 +2,7 @@
 date = '2026-06-05T17:03:24-04:00'
 draft = false
 title = 'My Favorite VS Code Keybindings'
+tags = ['Tools', 'Programming']
 +++
 
 Everyone developer has their secret sauce for making their environment as comfortable and ergonomic as possible. Over time you will figure out which commands just *click* for you and you can map these to easy keyboard shortcuts. Over my 8 years as a developer, here are some of the commands I've built up over the years to make editing text, moving windows, navigating the editor, and running commands a breeze in VS Code. 

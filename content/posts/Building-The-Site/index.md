@@ -1,6 +1,8 @@
 +++
 date = '2026-06-05T14:51:13-04:00'
+draft = false
 title = 'Building the Site'
+tags = ['Guides', 'Hugo', 'Website']
 +++
 
 

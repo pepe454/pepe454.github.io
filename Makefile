@@ -1,5 +1,5 @@
 # usage: make new content name=post-name
-add-content:
+new-post:
 	hugo new content posts/$(name).md
 
 build:

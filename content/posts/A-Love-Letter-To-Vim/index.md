@@ -2,6 +2,7 @@
 date = '2026-06-05T16:12:16-04:00'
 draft = false
 title = 'A Love Letter to Vim'
+tags = ['Tools', 'Programming']
 +++
 
 
