@@ -2,45 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Deep Fried Code</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://localhost:35455/tags/</link>
     <description>Recent content in Tags on Deep Fried Code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2026 17:03:24 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Jun 2026 10:52:23 -0400</lastBuildDate>
+    <atom:link href="http://localhost:35455/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dictionary</title>
+      <link>http://localhost:35455/tags/dictionary/</link>
+      <pubDate>Thu, 25 Jun 2026 10:52:23 -0400</pubDate>
+      <guid>http://localhost:35455/tags/dictionary/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:1313/tags/programming/</link>
-      <pubDate>Fri, 05 Jun 2026 17:03:24 -0400</pubDate>
-      <guid>http://localhost:1313/tags/programming/</guid>
+      <link>http://localhost:35455/tags/programming/</link>
+      <pubDate>Thu, 25 Jun 2026 10:52:23 -0400</pubDate>
+      <guid>http://localhost:35455/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:35455/tags/projects/</link>
+      <pubDate>Thu, 25 Jun 2026 10:52:23 -0400</pubDate>
+      <guid>http://localhost:35455/tags/projects/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sourashtra</title>
+      <link>http://localhost:35455/tags/sourashtra/</link>
+      <pubDate>Thu, 25 Jun 2026 10:52:23 -0400</pubDate>
+      <guid>http://localhost:35455/tags/sourashtra/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>http://localhost:1313/tags/tools/</link>
+      <link>http://localhost:35455/tags/tools/</link>
       <pubDate>Fri, 05 Jun 2026 17:03:24 -0400</pubDate>
-      <guid>http://localhost:1313/tags/tools/</guid>
+      <guid>http://localhost:35455/tags/tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Guides</title>
-      <link>http://localhost:1313/tags/guides/</link>
+      <link>http://localhost:35455/tags/guides/</link>
       <pubDate>Fri, 05 Jun 2026 14:51:13 -0400</pubDate>
-      <guid>http://localhost:1313/tags/guides/</guid>
+      <guid>http://localhost:35455/tags/guides/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>http://localhost:1313/tags/hugo/</link>
+      <link>http://localhost:35455/tags/hugo/</link>
       <pubDate>Fri, 05 Jun 2026 14:51:13 -0400</pubDate>
-      <guid>http://localhost:1313/tags/hugo/</guid>
+      <guid>http://localhost:35455/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Website</title>
-      <link>http://localhost:1313/tags/website/</link>
+      <link>http://localhost:35455/tags/website/</link>
       <pubDate>Fri, 05 Jun 2026 14:51:13 -0400</pubDate>
-      <guid>http://localhost:1313/tags/website/</guid>
+      <guid>http://localhost:35455/tags/website/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tools on Deep Fried Code</title>
-    <link>http://localhost:1313/tags/tools/</link>
+    <link>http://localhost:35455/tags/tools/</link>
     <description>Recent content in Tools on Deep Fried Code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Jun 2026 17:03:24 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:35455/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Favorite VS Code Keybindings</title>
-      <link>http://localhost:1313/posts/my-favorite-vscode-keybindings/</link>
+      <link>http://localhost:35455/posts/my-favorite-vscode-keybindings/</link>
       <pubDate>Fri, 05 Jun 2026 17:03:24 -0400</pubDate>
-      <guid>http://localhost:1313/posts/my-favorite-vscode-keybindings/</guid>
+      <guid>http://localhost:35455/posts/my-favorite-vscode-keybindings/</guid>
       <description>&lt;p&gt;Everyone developer has their secret sauce for making their environment as comfortable and ergonomic as possible. Over time you will figure out which commands just &lt;em&gt;click&lt;/em&gt; for you and you can map these to easy keyboard shortcuts. Over my 8 years as a developer, here are some of the commands I&amp;rsquo;ve built up over the years to make editing text, moving windows, navigating the editor, and running commands a breeze in VS Code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Love Letter to Vim</title>
-      <link>http://localhost:1313/posts/a-love-letter-to-vim/</link>
+      <link>http://localhost:35455/posts/a-love-letter-to-vim/</link>
       <pubDate>Fri, 05 Jun 2026 16:12:16 -0400</pubDate>
-      <guid>http://localhost:1313/posts/a-love-letter-to-vim/</guid>
+      <guid>http://localhost:35455/posts/a-love-letter-to-vim/</guid>
       <description>&lt;p&gt;I love Vim. I seriously do. So much so, in fact, that going back to regular text editing on coworker&amp;rsquo;s machines feels like I am 50% as productive otherwise. What makes Vim so effective? The answer is natural keybindings for the most common tasks while writing text. You can use it for writing any text, whether it be code, config files, markdown files, or any plain text you&amp;rsquo;re working on. When you first start out, it will be awkward. There&amp;rsquo;s no getting around that. However, once you&amp;rsquo;ve built up the muscle memory after a couple of days, using Vim will feel like second nature.&lt;/p&gt;</description>
     </item>
   </channel>

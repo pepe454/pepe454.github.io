@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Projects on Deep Fried Code</title>
+    <link>http://localhost:35455/tags/projects/</link>
+    <description>Recent content in Projects on Deep Fried Code</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Jun 2026 10:52:23 -0400</lastBuildDate>
+    <atom:link href="http://localhost:35455/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dictionary Website, Part 1: Background</title>
+      <link>http://localhost:35455/posts/dictionary-website-part-1/</link>
+      <pubDate>Thu, 25 Jun 2026 10:52:23 -0400</pubDate>
+      <guid>http://localhost:35455/posts/dictionary-website-part-1/</guid>
+      <description>&lt;p&gt;This post is Part 1 of my series on building a dictionary website for the Sourashtra Language.&lt;/p&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:35455/posts/dictionary-website-part-1/meenakshi-amman-temple-india.avif&#34;&gt;&lt;h3 id=&#34;project-background&#34;&gt;Project Background&lt;/h3&gt;
+&lt;p&gt;This is my first post on the dictionary website project, where I am building a site for translations and dictionary for the Sourashtra language.
+I am currently studying the language to better communicate with my in-laws after marrying into the community.
+Sourashtra is an endangered language with less than one million speakers. It is spoken primarily in Madurai, though speakers of the language reside
+in many cities in Tamil Nadu. The goal of this website is to provide a way for people to learn the language through translations of common words,
+example sentences and their english translations, and in the future, an audio player to learn pronunciations.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
