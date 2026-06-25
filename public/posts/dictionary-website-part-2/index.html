@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Dictionary Website, Part 2: Database Design | Deep Fried Code</title>
+<meta name="keywords" content="Programming, Projects, Dictionary, Sourashtra, Docker, Databases, Postgres, PgAdmin">
+<meta name="description" content="The first step in building the dictionary is data design. I will be using Postgress as a SQL relational database,
+and using PgAdmin to assist in the design of the tables and their relationships.
+Building the Database
+My choice for core technology underpinning the data of the website will be a relational database.
+Due to the relational nature of language data, especially for my features which will include words in-situ,
+as well as translations from english to sourashtra and vice-versa, a database is perfectly suited to the task.
+Moreover, there are database utilities that will allow for search and even fuzzy matching, so stay tuned for that later!">
+<meta name="author" content="">
+<link rel="canonical" href="https://deepfriedcode.blog/posts/dictionary-website-part-2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6ff46447b1fa3f8a5cc0bcae48088decc3ae37f5fbc99406a3aefc3bf0e6044a.css" integrity="sha256-b/RkR7H6P4pcwLyuSAiN7MOuN/X7yZQGo678O/DmBEo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://deepfriedcode.blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://deepfriedcode.blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://deepfriedcode.blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://deepfriedcode.blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://deepfriedcode.blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://deepfriedcode.blog/posts/dictionary-website-part-2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://deepfriedcode.blog/posts/dictionary-website-part-2/">
+  <meta property="og:site_name" content="Deep Fried Code">
+  <meta property="og:title" content="Dictionary Website, Part 2: Database Design">
+  <meta property="og:description" content="The first step in building the dictionary is data design. I will be using Postgress as a SQL relational database, and using PgAdmin to assist in the design of the tables and their relationships.
+Building the Database My choice for core technology underpinning the data of the website will be a relational database. Due to the relational nature of language data, especially for my features which will include words in-situ, as well as translations from english to sourashtra and vice-versa, a database is perfectly suited to the task. Moreover, there are database utilities that will allow for search and even fuzzy matching, so stay tuned for that later!">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-25T11:25:58-04:00">
+    <meta property="article:modified_time" content="2026-06-25T11:25:58-04:00">
+    <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="Projects">
+    <meta property="article:tag" content="Dictionary">
+    <meta property="article:tag" content="Sourashtra">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Databases">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dictionary Website, Part 2: Database Design">
+  <meta name="twitter:description" content="The first step in building the dictionary is data design. I will be using Postgress as a SQL relational database, and using PgAdmin to assist in the design of the tables and their relationships.
+Building the Database My choice for core technology underpinning the data of the website will be a relational database. Due to the relational nature of language data, especially for my features which will include words in-situ, as well as translations from english to sourashtra and vice-versa, a database is perfectly suited to the task. Moreover, there are database utilities that will allow for search and even fuzzy matching, so stay tuned for that later!">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://deepfriedcode.blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Dictionary Website, Part 2: Database Design",
+      "item": "https://deepfriedcode.blog/posts/dictionary-website-part-2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Dictionary Website, Part 2: Database Design",
+  "name": "Dictionary Website, Part 2: Database Design",
+  "description": "The first step in building the dictionary is data design. I will be using Postgress as a SQL relational database, and using PgAdmin to assist in the design of the tables and their relationships.\nBuilding the Database My choice for core technology underpinning the data of the website will be a relational database. Due to the relational nature of language data, especially for my features which will include words in-situ, as well as translations from english to sourashtra and vice-versa, a database is perfectly suited to the task. Moreover, there are database utilities that will allow for search and even fuzzy matching, so stay tuned for that later!\n",
+  "keywords": [
+    "Programming", "Projects", "Dictionary", "Sourashtra", "Docker", "Databases", "Postgres", "PgAdmin"
+  ],
+  "articleBody": "The first step in building the dictionary is data design. I will be using Postgress as a SQL relational database, and using PgAdmin to assist in the design of the tables and their relationships.\nBuilding the Database My choice for core technology underpinning the data of the website will be a relational database. Due to the relational nature of language data, especially for my features which will include words in-situ, as well as translations from english to sourashtra and vice-versa, a database is perfectly suited to the task. Moreover, there are database utilities that will allow for search and even fuzzy matching, so stay tuned for that later!\nDocker Compose Setup Below is my initial docker compose setup. I have designed it to have a postgres database with pgadmin as an admin website to access the database and design the Entity-Relationship diagram.\nname: joman services: postgres: image: postgres:18.3-alpine3.22 container_name: postgres restart: always shm_size: 128mb healthcheck: test: [\"CMD-SHELL\", \"pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}\"] interval: 10s retries: 5 start_period: 30s timeout: 10s ports: - \"${POSTGRES_PORT}:5432\" env_file: .env volumes: - pgdata:/var/lib/postgresql/data/pgdata pgadmin: image: dpage/pgadmin4:2026-03-03-1 container_name: pgadmin restart: always env_file: .env depends_on: - postgres ports: - \"8000:80\" volumes: - pgadmin-data:/var/lib/pgadmin volumes: pgdata: pgadmin-data: You will also notice that there is a referenced .env file. Here is an example of the variables:\n# Postgres POSTGRES_SERVER=localhost POSTGRES_PORT=5432 POSTGRES_DB=joman POSTGRES_USER=dbadmin POSTGRES_PASSWORD=changethis POSTGRES_URL=postgres://dbadmin:changethis@localhost:5432/pgdatabase PGADMIN_DEFAULT_EMAIL=changme@example.com PGADMIN_DEFAULT_PASSWORD=changethis All of these environment variables will allow me to statically set up admin users and passwords, which I will use to login and update the database.\nAfter setting up the environment variables, I need to download the docker images. You can simply do docker compose up:\n$ docker compose up -d and the images will pull automatically from the postgres and pgadmin docker repositories on dockerhub.\nAfter doing that, I am rewarded with the following admin page at localhost:8000: After entering the credentials, enter the database admin credentials set in the .env file: Awesome, now we are logged in to PgAdmin!\nEntity Relationship Diagrams The most important step now in the database design is how I set up the tables. Using database design principles, I will organize the schema to allow for sensible joins using foreign keys, allowing me to express the relationships in my data.\nOnce you login to PGAdmin, you can go into the database and create a new ER Diagram:\nThis is a really easy and intuitive way to create database tables. Instead of using SQL Data Definition Language (DDL) directly, I can simply design the tables using an easy interface and focus on the parts that matter.\nWords: The Foundation of the database The first table I will design is the words table. This is very important and will be the fundamental building block of the database. All other tables will be related to this table in some way.\nNow that I’m in the ER Diagram page, I can set up the words table like so: A couple of notes here:\nI’ve decided to go with word_id as a pk auto-incrementing id (serial data type) to ensure uniqueness. Word text will be the real text of the word. for sourashtra I will use english characters to phonetically write words. language and part_of_speech will directly reference other tables, but I will use the values directly so that I don’t have to join with the other tables every time I want to read out a word. word_text_alt gives me the ability to write other characters, for example writing the word in sourashtra lipi. audio_file_path also gives me the ability to later add the words audio files, which will be referenced in filepaths and stored on the filesystem. Excellent. Now that I’ve set up the words, it’s time to set up the rest of the database. I’ve decided to leverage the relational power of SQL to connect this words table to other tables\nTranslations First is translations - these will be a many-to-many mapping from sourashtra words to other words. This design is very flexible, because it allows me to add Tamil translations or any other language’s translation without modifying the schema or the design. Also, because I am primarily focused on translating sourashtra, I can do a specific Sourashtra word translated to a Tamil or English word. Otherwise, I would have 2-way translations, potentially getting quite messy.\nAfter you set up the foreign keys, be sure to set up cascade on delete. You do not want old translations lying around for a word that you have already deleted!\nThe other nice part about this design is that I can have multiple translations for a single word. Namely, if a sourashtra word has multiple meanings in English, I can simply have multiple rows in this table. This is the beauty of a many-to-many table also known as a join table or mapping table.\nSentences The other table I have set up is sentences. This is a full text sentence table, which will have mappings from each sentence to constituent parts, via the word_in_context table\nThis relation, word in context, allows me to connect many-to-many: one sentence can be connected to many words, and one word may be connected to many sentences.\nCategories In my view, it is very helpful to learn related words. If you are learning about household things, it’s helpful to learn all the related words, like bed, door, chair, bathroom, kitchen, oven, stove, table, plates, bowls, etc…\nThus, I have also set up a categories table. Like the other 2 tables, sentences and translations, this is yet another many-to-many relationship. A single word can be a part of multiple categories, and likewise, a category will certainly have multiple words.\nWord Metadata Of course, it will also be helpful to have context about each word. We will want to know:\nwhich language a word is a part of ; and which part of speech corresponds to the word I could use another foreign key join like the previous tables, but if I want to read a single word, I would have to join it with 2 other tables. So instead, I am going to add a foreign key with no id. Doing so will allow me to simply add the word’s part of speech and language directly. Instead of using an Enum type, which restricts usage after creation, I will use a foreign key to a table that I can later add to. Using the foreign key will restrict the language and part of speech to a set relationship on the other tables, but I will not have to join.\nOk, I’ve designed the relations and the foreign keys. Now it’s time to create the database.\nSaving the file Once I set up the tables, I can now hit this Generate SQL button: It will, you guessed it, generate a SQL File for you automatically: BEGIN; -- Use non-public schema as default. CREATE SCHEMA IF NOT EXISTS dictionary; -- Restrict languages CREATE TABLE IF NOT EXISTS dictionary.language ( language VARCHAR(16) NOT NULL, language_alt VARCHAR(16) NULL, CONSTRAINT pk_language PRIMARY KEY (language) ); -- Restrict parts of speech CREATE TABLE IF NOT EXISTS dictionary.part_of_speech ( part_of_speech VARCHAR(16) NOT NULL, CONSTRAINT pk_part_of_speech PRIMARY KEY (part_of_speech) ); -- more tables follow here... Isn’t that just awesome? I love databases.\nHowever, the not so awesome part is that I’d like to save this file out somewhere: As you’ve noticed , this folder is empty. Where could it be? Well, following docker first principles, it is somewhere in the container! Lo and behold, if I exec into the container, I am able to find the create script in the container /var/lib dir:\n$ docker exec -it pgadmin /bin/bash $ docker exec -it pgadmin /bin/bash $ ls LICENSE branding.py commit_hash config.py config_distro.py docs gunicorn_config.py migrations pgAdmin4.py pgAdmin4.wsgi pgacloud pgadmin run_pgadmin.py setup.py version.py $ cd /var/lib/pgadmin/storage/pgadmin@email.com/ $ ls example-script I can use the docker cp command to copy that file from the container to my host to save it for future use:\n$ docker cp joman-pgadmin-1:/var/lib/pgadmin/storage/pgadmin@email.com/example-script.sql ./backend/db/ Of course, I could have just copy and pasted into a local file. But I wanted to understand how files were stored in pgadmin.\nAlso, by doing that , I could also export to PNG and copy that file as well! Here’s what I got:\nCreating the schema You can easily use the psql command to execute the create schema script:\n$ psql -h localhost -p 5432 -U postgresadmin -d joman -f backend/db/create-schema.sql However, I wanted to make this a repeatable and automated process. I set up a volume on the local drive to the entrypoints scripts, which automatically run as soon as the postgres docker container starts up:\npostgres: # ignoring stuff above... volumes: - pgdata:/var/lib/postgresql/data/pgdata - ./backend/db/:/docker-entrypoint-initdb.d/ # init scripts Now, every time I start postgres on a fresh install or if I want to obliterate the existing database, I can delete the volume and simply docker compose up once again, then this create-schema script will automatically run on launch. Dang. I love postgres.\nAdding some seed data Having a schema is great and all, but it’s kinda boring. You can’t do anything with it. It’s like having a house with no furniture.\nI wanted to be able to test out some queries, so I inserted some words using an initial-seed.sql script:\nBEGIN; /* This script simply adds the word for mother in all 3 languages with metadata. */ INSERT INTO dictionary.language (language, language_alt) VALUES ('Sourashtra', 'ꢱꣃꢬꢵꢰ꣄ꢜ꣄ꢬ'), ('English', NULL), ('தமிழ்', 'Tamil'); INSERT INTO dictionary.part_of_speech (part_of_speech) VALUES ('noun'), ('pronoun'), ('verb'), ('adjective'), ('adverb'), ('preposition'), ('conjunction'), ('interjection'), ('numeral'), ('article'), ('interrogative'); INSERT INTO dictionary.word (word_text, language, part_of_speech, word_text_alt) VALUES ('ambO', 'Sourashtra', 'noun', 'ꢂꢪ꣄ꢨꣁ'), ('mother', 'English', 'noun', NULL), ('அம்மா', 'தமிழ்', 'noun', 'amma'); INSERT INTO dictionary.translation (sourashtra_word_id, other_word_id, context) VALUES (1, 2, NULL), (1, 3, NULL); INSERT INTO dictionary.category (category) VALUES ('family'), -- always put family first! -- these are all parts of speech ('adjectives'), ('adverbs'), ('pronouns'), ('verbs'), ('questions'), ('numbers'), ('conjunctions'), ('prepositions'), ('animals'), ('body'), ('clothing'), ('cognition'), ('colors'), ('feelings'), ('food'), ('house'), ('nature'), ('people'), ('places'), ('taste'), ('time'); INSERT INTO dictionary.word_category (word_id, category_id) VALUES (1, 1), -- sourashtra ambO -\u003e family (2, 1), -- english mother -\u003e family (3, 1); -- tamil ammo -\u003e family END; After doing that, I could test the schema out. First, connect to the database (install psql client first):\n$ psql -h localhost -p 5432 -U dbadmin -d joman Once I’m in the database, now I can check out the relations, using the \\dt command:\nList of tables:\nSchema Name Type Owner dictionary category table postgresadmin dictionary language table postgresadmin dictionary part_of_speech table postgresadmin dictionary sentence table postgresadmin dictionary sentence_translation table postgresadmin dictionary translation table postgresadmin dictionary word table postgresadmin dictionary word_category table postgresadmin dictionary word_in_context table postgresadmin I can also check out a specific table by typing \\d word :\nTable “dictionary.word”\nColumn Type Nullable Default word_id integer not null nextval(‘word_word_id_seq’::regclass) word_text text not null language character varying(16) not null part_of_speech character varying(16) not null word_text_alt text audio_file_path text Indexes:\npk_word PRIMARY KEY, btree (word_id) fki_fk_word_language btree (language) fki_fk_word_part_of_speech btree (part_of_speech) word_text_distinct UNIQUE CONSTRAINT, btree (word_text, language) Foreign-key constraints:\nfk_word_language FOREIGN KEY (language) REFERENCES language(language) ON DELETE RESTRICT fk_word_part_of_speech FOREIGN KEY (part_of_speech) REFERENCES part_of_speech(part_of_speech) ON UPDATE CASCADE ON DELETE RESTRICT Referenced by:\nTABLE translation CONSTRAINT fk_other_word_id FOREIGN KEY (other_word_id) REFERENCES word(word_id) ON UPDATE CASCADE ON DELETE CASCADE TABLE translation CONSTRAINT fk_sourashtra_word_id FOREIGN KEY (sourashtra_word_id) REFERENCES word(word_id) ON UPDATE CASCADE ON DELETE CASCADE TABLE word_category CONSTRAINT fk_word_id_to_category FOREIGN KEY (word_id) REFERENCES word(word_id) ON UPDATE CASCADE ON DELETE CASCADE TABLE word_in_context CONSTRAINT fk_word_word_in_ctxt FOREIGN KEY (word_id) REFERENCES word(word_id) ON UPDATE CASCADE ON DELETE CASCADE Lovely. Now that I have confirmed the tables are created and set up, I can write some queries!\nHere is one query to get the words matched to their respective categories:\nselect w.word_id, w.word_text, c.category from dictionary.word w inner join dictionary.word_category wc on w.word_id = wc.word_id inner join dictionary.category c on c.category_id = wc.category_id I get this output, as expected:\nword_id word_text category 1 ambO family 2 mother family 3 அம்மா family This query will tranlsate sourashtra words for me:\nwith sourashtra_words as ( select word_id, word_text, part_of_speech from word where language = 'Sourashtra' ), other_words as ( select word_id, word_text, word_text_alt from word where language != 'Sourashtra' ) select sourashtra_words.*, other_words.* from sourashtra_words join translation wt on sourashtra_words.word_id = wt.sourashtra_word_id join other_words on other_words.word_id = wt.other_word_id word_id word_text part_of_speech word_id word_text word_text_alt 1 ambO noun 2 mother 1 ambO noun 3 அம்மா amma Recap I covered a lot on this post, but we are just getting started. The next step is to build out the language corpus and start seeding some data into the db!\n",
+  "wordCount" : "2096",
+  "inLanguage": "en",
+  "datePublished": "2026-06-25T11:25:58-04:00",
+  "dateModified": "2026-06-25T11:25:58-04:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://deepfriedcode.blog/posts/dictionary-website-part-2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Deep Fried Code",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://deepfriedcode.blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://deepfriedcode.blog/" accesskey="h" title="Deep Fried Code (Alt + H)">Deep Fried Code</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://deepfriedcode.blog/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://deepfriedcode.blog/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://deepfriedcode.blog/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://deepfriedcode.blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Dictionary Website, Part 2: Database Design
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-06-25 11:25:58 -0400 EDT'>June 25, 2026</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><p>The first step in building the dictionary is data design. I will be using Postgress as a SQL relational database,
+and using PgAdmin to assist in the design of the tables and their relationships.</p>
+<h2 id="building-the-database">Building the Database<a hidden class="anchor" aria-hidden="true" href="#building-the-database">#</a></h2>
+<p>My choice for core technology underpinning the data of the website will be a relational database.
+Due to the relational nature of language data, especially for my features which will include words in-situ,
+as well as translations from english to sourashtra and vice-versa, a database is perfectly suited to the task.
+Moreover, there are database utilities that will allow for search and even fuzzy matching, so stay tuned for that later!</p>
+<h2 id="docker-compose-setup">Docker Compose Setup<a hidden class="anchor" aria-hidden="true" href="#docker-compose-setup">#</a></h2>
+<p>Below is my initial docker compose setup. I have designed it to have a postgres database with pgadmin as an admin website
+to access the database and design the Entity-Relationship diagram.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">joman</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">postgres</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">postgres:18.3-alpine3.22</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">postgres</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">shm_size</span>: <span style="color:#ae81ff">128mb</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">healthcheck</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">test</span>: [<span style="color:#e6db74">&#34;CMD-SHELL&#34;</span>, <span style="color:#e6db74">&#34;pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}&#34;</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">interval</span>: <span style="color:#ae81ff">10s</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">retries</span>: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">start_period</span>: <span style="color:#ae81ff">30s</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">timeout</span>: <span style="color:#ae81ff">10s</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;${POSTGRES_PORT}:5432&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">env_file</span>: <span style="color:#ae81ff">.env</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pgdata:/var/lib/postgresql/data/pgdata</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pgadmin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">dpage/pgadmin4:2026-03-03-1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">pgadmin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">env_file</span>: <span style="color:#ae81ff">.env</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">postgres</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8000:80&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">pgadmin-data:/var/lib/pgadmin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pgdata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pgadmin-data</span>:
+</span></span></code></pre></div><p>You will also notice that there is a referenced .env file. Here is an example of the variables:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Postgres</span>
+</span></span><span style="display:flex;"><span>POSTGRES_SERVER<span style="color:#f92672">=</span>localhost
+</span></span><span style="display:flex;"><span>POSTGRES_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">5432</span>
+</span></span><span style="display:flex;"><span>POSTGRES_DB<span style="color:#f92672">=</span>joman
+</span></span><span style="display:flex;"><span>POSTGRES_USER<span style="color:#f92672">=</span>dbadmin
+</span></span><span style="display:flex;"><span>POSTGRES_PASSWORD<span style="color:#f92672">=</span>changethis
+</span></span><span style="display:flex;"><span>POSTGRES_URL<span style="color:#f92672">=</span>postgres://dbadmin:changethis@localhost:5432/pgdatabase
+</span></span><span style="display:flex;"><span>PGADMIN_DEFAULT_EMAIL<span style="color:#f92672">=</span>changme@example.com
+</span></span><span style="display:flex;"><span>PGADMIN_DEFAULT_PASSWORD<span style="color:#f92672">=</span>changethis
+</span></span></code></pre></div><p>All of these environment variables will allow me to statically set up admin users and passwords, which I will use to login and
+update the database.</p>
+<p>After setting up the environment variables, I need to download the docker images. You can simply do docker compose up:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ docker compose up -d
+</span></span></code></pre></div><p>and the images will pull automatically from the postgres and pgadmin docker repositories on dockerhub.</p>
+<p>After doing that, I am rewarded with the following admin page at localhost:8000:
+<img alt="PgAdmin Login Page" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin.png"></p>
+<p>After entering the credentials, enter the database admin credentials set in the .env file:
+<img alt="PgAdmin Server Page" loading="lazy" src="/posts/dictionary-website-part-2/PGAdminServer.png">
+<img alt="PgAdmin Server Page2" loading="lazy" src="/posts/dictionary-website-part-2/PGAdminServer2.png"></p>
+<p>Awesome, now we are logged in to PgAdmin!</p>
+<h2 id="entity-relationship-diagrams">Entity Relationship Diagrams<a hidden class="anchor" aria-hidden="true" href="#entity-relationship-diagrams">#</a></h2>
+<p>The most important step now in the database design is how I set up the tables. Using database design principles,
+I will organize the schema to allow for sensible joins using foreign keys, allowing me to express the relationships in my data.</p>
+<p>Once you login to PGAdmin, you can go into the database and create a new ER Diagram:</p>
+<img alt="PgAdmin Server Setup ER diagram" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-ERD-Setup.png"><p>This is a really easy and intuitive way to create database tables. Instead of using SQL Data Definition Language (DDL) directly,
+I can simply design the tables using an easy interface and focus on the parts that matter.</p>
+<h4 id="words-the-foundation-of-the-database">Words: The Foundation of the database<a hidden class="anchor" aria-hidden="true" href="#words-the-foundation-of-the-database">#</a></h4>
+<p>The first table I will design is the words table. This is very important and will be the fundamental building block of the database.
+All other tables will be related to this table in some way.</p>
+<p>Now that I&rsquo;m in the ER Diagram page, I can set up the words table like so:
+<img alt="PgAdmin Words" loading="lazy" src="/posts/dictionary-website-part-2/PGAdminERD2.png"></p>
+<p>A couple of notes here:</p>
+<ul>
+<li>I&rsquo;ve decided to go with word_id as a pk auto-incrementing id (serial data type) to ensure uniqueness.</li>
+<li>Word text will be the real text of the word. for sourashtra I will use english characters to phonetically write words.</li>
+<li>language and part_of_speech will directly reference other tables, but I will use the values directly so that
+I don&rsquo;t have to join with the other tables every time I want to read out a word.</li>
+<li>word_text_alt gives me the ability to write other characters, for example writing the word in sourashtra lipi.</li>
+<li>audio_file_path also gives me the ability to later add the words audio files, which will be referenced in filepaths and stored on the filesystem.</li>
+</ul>
+<p>Excellent. Now that I&rsquo;ve set up the words, it&rsquo;s time to set up the rest of the database. I&rsquo;ve decided to leverage the
+relational power of SQL to connect this words table to other tables</p>
+<h4 id="translations">Translations<a hidden class="anchor" aria-hidden="true" href="#translations">#</a></h4>
+<p>First is translations - these will be a many-to-many mapping from sourashtra words to other words.
+<img alt="PgAdmin Translations" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-Translations.png"></p>
+<p>This design is very flexible, because it allows me to add Tamil translations or any other language&rsquo;s translation without
+modifying the schema or the design. Also, because I am primarily focused on translating sourashtra, I can do a specific
+Sourashtra word translated to a Tamil or English word. Otherwise, I would have 2-way translations, potentially getting
+quite messy.</p>
+<img alt="PgAdmin Translations" loading="lazy" src="/posts/dictionary-website-part-2/PGAdminERD-FK.png"><p>After you set up the foreign keys, be sure to set up cascade on delete. You do not want old translations lying around
+for a word that you have already deleted!</p>
+<img alt="PgAdmin Translations" loading="lazy" src="/posts/dictionary-website-part-2/PGAdminERD-FK2.png"><p>The other nice part about this design is that I can have multiple translations for a single word.
+Namely, if a sourashtra word has multiple meanings in English, I can simply have multiple rows in this table.
+This is the beauty of a many-to-many table also known as a join table or mapping table.</p>
+<h4 id="sentences">Sentences<a hidden class="anchor" aria-hidden="true" href="#sentences">#</a></h4>
+<p>The other table I have set up is sentences. This is a full text sentence table, which will have mappings from each
+sentence to constituent parts, via the word_in_context table</p>
+<img alt="PgAdmin Sentences" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-Sentences.png"><p>This relation, word in context, allows me to connect many-to-many: one sentence can be connected to many words, and
+one word may be connected to many sentences.</p>
+<img alt="PgAdmin Sentences" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-WordInContext.png"><h4 id="categories">Categories<a hidden class="anchor" aria-hidden="true" href="#categories">#</a></h4>
+<p>In my view, it is very helpful to learn related words. If you are learning about household things, it&rsquo;s helpful to learn
+all the related words, like bed, door, chair, bathroom, kitchen, oven, stove, table, plates, bowls, etc&hellip;</p>
+<img alt="PgAdmin Categories" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-Categories.png"><p>Thus, I have also set up a categories table. Like the other 2 tables, sentences and translations, this is yet another
+many-to-many relationship. A single word can be a part of multiple categories, and likewise, a category will certainly have
+multiple words.</p>
+<img alt="PgAdmin Categories" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-WordCategories.png"><h4 id="word-metadata">Word Metadata<a hidden class="anchor" aria-hidden="true" href="#word-metadata">#</a></h4>
+<p>Of course, it will also be helpful to have context about each word. We will want to know:</p>
+<ul>
+<li>which language a word is a part of ; and</li>
+<li>which part of speech corresponds to the word</li>
+</ul>
+<p>I could use another foreign key join like the previous tables, but if I want to read a single word, I would have to join it
+with 2 other tables. So instead, I am going to add a foreign key with no id. Doing so will allow me to simply add the word&rsquo;s
+part of speech and language directly. Instead of using an Enum type, which restricts usage after creation, I will use a foreign
+key to a table that I can later add to. Using the foreign key will restrict the language and part of speech to a set relationship
+on the other tables, but I will not have to join.</p>
+<p><img alt="PgAdmin Languages" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-Languages.png">
+<img alt="PgAdmin PartOfSpeech" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-PartOfSpeech.png"></p>
+<p>Ok, I&rsquo;ve designed the relations and the foreign keys. Now it&rsquo;s time to create the database.</p>
+<h4 id="saving-the-file">Saving the file<a hidden class="anchor" aria-hidden="true" href="#saving-the-file">#</a></h4>
+<p>Once I set up the tables, I can now hit this Generate SQL button:
+<img alt="PgAdmin Generate SQL" loading="lazy" src="/posts/dictionary-website-part-2/PGAdminERD3.png"></p>
+<p>It will, you guessed it, generate a SQL File for you automatically:
+<img alt="PgAdmin GeneratED sql" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-Create.png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Use non-public schema as default.
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">SCHEMA</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#66d9ef">dictionary</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Restrict languages
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#66d9ef">dictionary</span>.<span style="color:#66d9ef">language</span>
+</span></span><span style="display:flex;"><span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">language</span> VARCHAR(<span style="color:#ae81ff">16</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    language_alt VARCHAR(<span style="color:#ae81ff">16</span>) <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">CONSTRAINT</span> pk_language <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#66d9ef">language</span>)
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Restrict parts of speech
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#66d9ef">dictionary</span>.part_of_speech 
+</span></span><span style="display:flex;"><span>(
+</span></span><span style="display:flex;"><span>    part_of_speech VARCHAR(<span style="color:#ae81ff">16</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">CONSTRAINT</span> pk_part_of_speech <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (part_of_speech)
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- more tables follow here...
+</span></span></span></code></pre></div><p>Isn&rsquo;t that just awesome? I love databases.</p>
+<p>However, the not so awesome part is that I&rsquo;d like to save this file out somewhere:
+<img alt="PgAdmin Words" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-Save.png"></p>
+<p>As you&rsquo;ve noticed , this folder is empty. Where could it be? Well, following docker first principles, it is somewhere
+in the container! Lo and behold, if I exec into the container, I am able to find the create script in the container /var/lib dir:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ docker exec -it pgadmin /bin/bash
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ docker exec -it pgadmin /bin/bash
+</span></span><span style="display:flex;"><span>$ ls
+</span></span><span style="display:flex;"><span>LICENSE             branding.py         commit_hash         config.py           config_distro.py    docs                gunicorn_config.py  migrations          pgAdmin4.py         pgAdmin4.wsgi       pgacloud            pgadmin             run_pgadmin.py      setup.py            version.py
+</span></span><span style="display:flex;"><span>$ cd /var/lib/pgadmin/storage/pgadmin@email.com/
+</span></span><span style="display:flex;"><span>$ ls
+</span></span><span style="display:flex;"><span>example-script
+</span></span></code></pre></div><p>I can use the docker cp command to copy that file from the container to my host to save it for future use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ docker cp joman-pgadmin-1:/var/lib/pgadmin/storage/pgadmin@email.com/example-script.sql ./backend/db/
+</span></span></code></pre></div><p>Of course, I could have just copy and pasted into a local file. But I wanted to understand how files were stored in pgadmin.</p>
+<p>Also, by doing that , I could also export to PNG and copy that file as well! Here&rsquo;s what I got:</p>
+<img alt="Total ER Diagram" loading="lazy" src="/posts/dictionary-website-part-2/PGAdminERD1.png"><h2 id="creating-the-schema">Creating the schema<a hidden class="anchor" aria-hidden="true" href="#creating-the-schema">#</a></h2>
+<p>You can easily use the psql command to execute the create schema script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ psql -h localhost -p <span style="color:#ae81ff">5432</span> -U postgresadmin -d joman -f backend/db/create-schema.sql 
+</span></span></code></pre></div><p>However, I wanted to make this a repeatable and automated process. I set up a volume on the local drive to
+the entrypoints scripts, which automatically run as soon as the postgres docker container starts up:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">postgres</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ignoring stuff above...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">pgdata:/var/lib/postgresql/data/pgdata</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">./backend/db/:/docker-entrypoint-initdb.d/</span> <span style="color:#75715e"># init scripts</span>
+</span></span></code></pre></div><p>Now, every time I start postgres on a fresh install or if I want to obliterate the existing database,
+I can delete the volume and simply docker compose up once again, then this create-schema script will automatically
+run on launch. Dang. I love postgres.</p>
+<h4 id="adding-some-seed-data">Adding some seed data<a hidden class="anchor" aria-hidden="true" href="#adding-some-seed-data">#</a></h4>
+<p>Having a schema is great and all, but it&rsquo;s kinda boring. You can&rsquo;t do anything with it. It&rsquo;s like having a house with no furniture.</p>
+<p>I wanted to be able to test out some queries, so I inserted some words using an initial-seed.sql script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* This script simply adds the word for mother in all 3 languages with metadata. */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#66d9ef">dictionary</span>.<span style="color:#66d9ef">language</span> (<span style="color:#66d9ef">language</span>, language_alt) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;Sourashtra&#39;</span>, <span style="color:#e6db74">&#39;ꢱꣃꢬꢵꢰ꣄ꢜ꣄ꢬ&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;English&#39;</span>, <span style="color:#66d9ef">NULL</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;தமிழ்&#39;</span>, <span style="color:#e6db74">&#39;Tamil&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#66d9ef">dictionary</span>.part_of_speech (part_of_speech) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;noun&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;pronoun&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;verb&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;adjective&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;adverb&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;preposition&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;conjunction&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;interjection&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;numeral&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;article&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;interrogative&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#66d9ef">dictionary</span>.word (word_text, <span style="color:#66d9ef">language</span>, part_of_speech, word_text_alt) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;ambO&#39;</span>, <span style="color:#e6db74">&#39;Sourashtra&#39;</span>, <span style="color:#e6db74">&#39;noun&#39;</span>, <span style="color:#e6db74">&#39;ꢂꢪ꣄ꢨꣁ&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;mother&#39;</span>, <span style="color:#e6db74">&#39;English&#39;</span>, <span style="color:#e6db74">&#39;noun&#39;</span>, <span style="color:#66d9ef">NULL</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;அம்மா&#39;</span>, <span style="color:#e6db74">&#39;தமிழ்&#39;</span>, <span style="color:#e6db74">&#39;noun&#39;</span>, <span style="color:#e6db74">&#39;amma&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#66d9ef">dictionary</span>.<span style="color:#66d9ef">translation</span> (sourashtra_word_id, other_word_id, context) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#66d9ef">NULL</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#66d9ef">NULL</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#66d9ef">dictionary</span>.category (category) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;family&#39;</span>), <span style="color:#75715e">-- always put family first!
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- these are all parts of speech
+</span></span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;adjectives&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;adverbs&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;pronouns&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;verbs&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;questions&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;numbers&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;conjunctions&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;prepositions&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;animals&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;body&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;clothing&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;cognition&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;colors&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;feelings&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;food&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;house&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;nature&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;people&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;places&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;taste&#39;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;time&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#66d9ef">dictionary</span>.word_category (word_id, category_id) <span style="color:#66d9ef">VALUES</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>), <span style="color:#75715e">-- sourashtra ambO -&gt; family
+</span></span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>), <span style="color:#75715e">-- english    mother -&gt; family
+</span></span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>); <span style="color:#75715e">-- tamil      ammo -&gt; family
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>;
+</span></span></code></pre></div><p>After doing that, I could test the schema out. First, connect to the database (install psql client first):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ psql -h localhost -p <span style="color:#ae81ff">5432</span> -U dbadmin -d joman
+</span></span></code></pre></div><p>Once I&rsquo;m in the database, now I can check out the relations, using the <code>\dt</code> command:</p>
+<p>List of tables:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Schema</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Owner</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dictionary</td>
+          <td>category</td>
+          <td>table</td>
+          <td>postgresadmin</td>
+      </tr>
+      <tr>
+          <td>dictionary</td>
+          <td>language</td>
+          <td>table</td>
+          <td>postgresadmin</td>
+      </tr>
+      <tr>
+          <td>dictionary</td>
+          <td>part_of_speech</td>
+          <td>table</td>
+          <td>postgresadmin</td>
+      </tr>
+      <tr>
+          <td>dictionary</td>
+          <td>sentence</td>
+          <td>table</td>
+          <td>postgresadmin</td>
+      </tr>
+      <tr>
+          <td>dictionary</td>
+          <td>sentence_translation</td>
+          <td>table</td>
+          <td>postgresadmin</td>
+      </tr>
+      <tr>
+          <td>dictionary</td>
+          <td>translation</td>
+          <td>table</td>
+          <td>postgresadmin</td>
+      </tr>
+      <tr>
+          <td>dictionary</td>
+          <td>word</td>
+          <td>table</td>
+          <td>postgresadmin</td>
+      </tr>
+      <tr>
+          <td>dictionary</td>
+          <td>word_category</td>
+          <td>table</td>
+          <td>postgresadmin</td>
+      </tr>
+      <tr>
+          <td>dictionary</td>
+          <td>word_in_context</td>
+          <td>table</td>
+          <td>postgresadmin</td>
+      </tr>
+  </tbody>
+</table>
+<p>I can also check out a specific table by typing <code>\d word</code> :</p>
+<p><strong>Table &ldquo;dictionary.word&rdquo;</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Column</th>
+          <th>Type</th>
+          <th>Nullable</th>
+          <th>Default</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>word_id</td>
+          <td>integer</td>
+          <td>not null</td>
+          <td>nextval(&lsquo;word_word_id_seq&rsquo;::regclass)</td>
+      </tr>
+      <tr>
+          <td>word_text</td>
+          <td>text</td>
+          <td>not null</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>language</td>
+          <td>character varying(16)</td>
+          <td>not null</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>part_of_speech</td>
+          <td>character varying(16)</td>
+          <td>not null</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>word_text_alt</td>
+          <td>text</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>audio_file_path</td>
+          <td>text</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Indexes:</strong></p>
+<ul>
+<li><code>pk_word</code> PRIMARY KEY, btree (word_id)</li>
+<li><code>fki_fk_word_language</code> btree (language)</li>
+<li><code>fki_fk_word_part_of_speech</code> btree (part_of_speech)</li>
+<li><code>word_text_distinct</code> UNIQUE CONSTRAINT, btree (word_text, language)</li>
+</ul>
+<p><strong>Foreign-key constraints:</strong></p>
+<ul>
+<li><code>fk_word_language</code> FOREIGN KEY (language) REFERENCES language(language) ON DELETE RESTRICT</li>
+<li><code>fk_word_part_of_speech</code> FOREIGN KEY (part_of_speech) REFERENCES part_of_speech(part_of_speech) ON UPDATE CASCADE ON DELETE RESTRICT</li>
+</ul>
+<p><strong>Referenced by:</strong></p>
+<ul>
+<li>TABLE <code>translation</code> CONSTRAINT <code>fk_other_word_id</code> FOREIGN KEY (other_word_id) REFERENCES word(word_id) ON UPDATE CASCADE ON DELETE CASCADE</li>
+<li>TABLE <code>translation</code> CONSTRAINT <code>fk_sourashtra_word_id</code> FOREIGN KEY (sourashtra_word_id) REFERENCES word(word_id) ON UPDATE CASCADE ON DELETE CASCADE</li>
+<li>TABLE <code>word_category</code> CONSTRAINT <code>fk_word_id_to_category</code> FOREIGN KEY (word_id) REFERENCES word(word_id) ON UPDATE CASCADE ON DELETE CASCADE</li>
+<li>TABLE <code>word_in_context</code> CONSTRAINT <code>fk_word_word_in_ctxt</code> FOREIGN KEY (word_id) REFERENCES word(word_id) ON UPDATE CASCADE ON DELETE CASCADE</li>
+</ul>
+<p>Lovely. Now that I have confirmed the tables are created and set up, I can write some queries!</p>
+<p>Here is one query to get the words matched to their respective categories:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> w.word_id,
+</span></span><span style="display:flex;"><span>       w.word_text,
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">c</span>.category
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> <span style="color:#66d9ef">dictionary</span>.word w
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">inner</span> <span style="color:#66d9ef">join</span> <span style="color:#66d9ef">dictionary</span>.word_category wc <span style="color:#66d9ef">on</span> w.word_id <span style="color:#f92672">=</span> wc.word_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">inner</span> <span style="color:#66d9ef">join</span> <span style="color:#66d9ef">dictionary</span>.category <span style="color:#66d9ef">c</span> <span style="color:#66d9ef">on</span> <span style="color:#66d9ef">c</span>.category_id <span style="color:#f92672">=</span> wc.category_id
+</span></span></code></pre></div><p>I get this output, as expected:</p>
+<table>
+  <thead>
+      <tr>
+          <th>word_id</th>
+          <th>word_text</th>
+          <th>category</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>ambO</td>
+          <td>family</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>mother</td>
+          <td>family</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>அம்மா</td>
+          <td>family</td>
+      </tr>
+  </tbody>
+</table>
+<p>This query will tranlsate sourashtra words for me:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> sourashtra_words <span style="color:#66d9ef">as</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">select</span> word_id, word_text, part_of_speech 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">from</span> word
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">language</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sourashtra&#39;</span>
+</span></span><span style="display:flex;"><span>),
+</span></span><span style="display:flex;"><span>other_words <span style="color:#66d9ef">as</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">select</span> word_id, word_text, word_text_alt
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">from</span> word 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">language</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;Sourashtra&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">select</span> sourashtra_words.<span style="color:#f92672">*</span>,
+</span></span><span style="display:flex;"><span>       other_words.<span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> sourashtra_words 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> <span style="color:#66d9ef">translation</span> wt
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> sourashtra_words.word_id <span style="color:#f92672">=</span> wt.sourashtra_word_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> other_words
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> other_words.word_id <span style="color:#f92672">=</span> wt.other_word_id
+</span></span></code></pre></div><table>
+  <thead>
+      <tr>
+          <th>word_id</th>
+          <th>word_text</th>
+          <th>part_of_speech</th>
+          <th>word_id</th>
+          <th>word_text</th>
+          <th>word_text_alt</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>ambO</td>
+          <td>noun</td>
+          <td>2</td>
+          <td>mother</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>ambO</td>
+          <td>noun</td>
+          <td>3</td>
+          <td>அம்மா</td>
+          <td>amma</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="recap">Recap<a hidden class="anchor" aria-hidden="true" href="#recap">#</a></h2>
+<p>I covered a lot on this post, but we are just getting started. The next step is to build out the
+language corpus and start seeding some data into the db!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://deepfriedcode.blog/tags/programming/">Programming</a></li>
+      <li><a href="https://deepfriedcode.blog/tags/projects/">Projects</a></li>
+      <li><a href="https://deepfriedcode.blog/tags/dictionary/">Dictionary</a></li>
+      <li><a href="https://deepfriedcode.blog/tags/sourashtra/">Sourashtra</a></li>
+      <li><a href="https://deepfriedcode.blog/tags/docker/">Docker</a></li>
+      <li><a href="https://deepfriedcode.blog/tags/databases/">Databases</a></li>
+      <li><a href="https://deepfriedcode.blog/tags/postgres/">Postgres</a></li>
+      <li><a href="https://deepfriedcode.blog/tags/pgadmin/">PgAdmin</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://deepfriedcode.blog/">Deep Fried Code</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

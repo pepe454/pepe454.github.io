@@ -2,12 +2,12 @@
 date = '2026-06-25T10:52:23-04:00'
 draft = false
 title = 'Dictionary Website, Part 1: Background'
-tags = ['Programming', 'Projects', 'Dictionary', 'Sourashtra']
+tags = ['Projects', 'Dictionary', 'Sourashtra']
 +++
 
 This post is Part 1 of my series on building a dictionary website for the Sourashtra Language.
 
-![](./meenakshi-amman-temple-india.avif)
+![Meenakshi Amman Temple of Madurai](./meenakshi-amman-temple-india.avif)
 
 Photograph by Poras Chaudhary, The New York Times/Redux
 
@@ -42,6 +42,25 @@ The following features will be available on the site to provide a rich learning 
 - Categories for structured learning
 - Examples of words in context sentences
 - Sentence to sentence translation for grammatical examples.
+
+
+### Joman
+
+![Joman at my wedding reception](./Joman.jpg)
+
+In Sourashtra, the word Joman means feast. Specifically, a feast that will celebrate some occasion or gathering of family.
+I've decided to name my website Joman Dictionary, in honor of the joman, a gathering where family and friends come together
+to eat food and celebrate life and share in the joy of a delightful meal.
+
+Pictured above is from my wedding reception, where we sat in long banquet style seating in the wedding hall and ate various 
+chutneys, pongals, and rice on top of banana leafs with our hands.
+
+
+
+### Next Steps
+
+Now that I'm embarking on my journey to build the website, I will need to model the data. 
+Join me on my next post, where I set up the database : [Dictionary Website, Part 2: Database Design](../dictionary-website-part-2)
 
 
 ### Sourashtra Resources

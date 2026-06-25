@@ -2,19 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Projects on Deep Fried Code</title>
-    <link>http://localhost:35455/tags/projects/</link>
+    <link>https://deepfriedcode.blog/tags/projects/</link>
     <description>Recent content in Projects on Deep Fried Code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jun 2026 10:52:23 -0400</lastBuildDate>
-    <atom:link href="http://localhost:35455/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Jun 2026 11:25:58 -0400</lastBuildDate>
+    <atom:link href="https://deepfriedcode.blog/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dictionary Website, Part 2: Database Design</title>
+      <link>https://deepfriedcode.blog/posts/dictionary-website-part-2/</link>
+      <pubDate>Thu, 25 Jun 2026 11:25:58 -0400</pubDate>
+      <guid>https://deepfriedcode.blog/posts/dictionary-website-part-2/</guid>
+      <description>&lt;p&gt;The first step in building the dictionary is data design. I will be using Postgress as a SQL relational database,
+and using PgAdmin to assist in the design of the tables and their relationships.&lt;/p&gt;
+&lt;h2 id=&#34;building-the-database&#34;&gt;Building the Database&lt;/h2&gt;
+&lt;p&gt;My choice for core technology underpinning the data of the website will be a relational database.
+Due to the relational nature of language data, especially for my features which will include words in-situ,
+as well as translations from english to sourashtra and vice-versa, a database is perfectly suited to the task.
+Moreover, there are database utilities that will allow for search and even fuzzy matching, so stay tuned for that later!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dictionary Website, Part 1: Background</title>
-      <link>http://localhost:35455/posts/dictionary-website-part-1/</link>
+      <link>https://deepfriedcode.blog/posts/dictionary-website-part-1/</link>
       <pubDate>Thu, 25 Jun 2026 10:52:23 -0400</pubDate>
-      <guid>http://localhost:35455/posts/dictionary-website-part-1/</guid>
+      <guid>https://deepfriedcode.blog/posts/dictionary-website-part-1/</guid>
       <description>&lt;p&gt;This post is Part 1 of my series on building a dictionary website for the Sourashtra Language.&lt;/p&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:35455/posts/dictionary-website-part-1/meenakshi-amman-temple-india.avif&#34;&gt;&lt;h3 id=&#34;project-background&#34;&gt;Project Background&lt;/h3&gt;
+&lt;img alt=&#34;Meenakshi Amman Temple of Madurai&#34; loading=&#34;lazy&#34; src=&#34;https://deepfriedcode.blog/posts/dictionary-website-part-1/meenakshi-amman-temple-india.avif&#34;&gt;&lt;p&gt;Photograph by Poras Chaudhary, The New York Times/Redux&lt;/p&gt;
+&lt;h3 id=&#34;project-background&#34;&gt;Project Background&lt;/h3&gt;
 &lt;p&gt;This is my first post on the dictionary website project, where I am building a site for translations and dictionary for the Sourashtra language.
 I am currently studying the language to better communicate with my in-laws after marrying into the community.
 Sourashtra is an endangered language with less than one million speakers. It is spoken primarily in Madurai, though speakers of the language reside

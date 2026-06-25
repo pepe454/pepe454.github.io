@@ -2,53 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:35455/</loc>
+    <loc>https://deepfriedcode.blog/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/tags/databases/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/tags/dictionary/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/posts/dictionary-website-part-2/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/tags/docker/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/tags/pgadmin/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/tags/postgres/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/posts/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/tags/programming/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/tags/projects/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/tags/sourashtra/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/tags/</loc>
+    <lastmod>2026-06-25T11:25:58-04:00</lastmod>
+  </url><url>
+    <loc>https://deepfriedcode.blog/posts/dictionary-website-part-1/</loc>
     <lastmod>2026-06-25T10:52:23-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:35455/tags/dictionary/</loc>
-    <lastmod>2026-06-25T10:52:23-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:35455/posts/dictionary-website-part-1/</loc>
-    <lastmod>2026-06-25T10:52:23-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:35455/posts/</loc>
-    <lastmod>2026-06-25T10:52:23-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:35455/tags/programming/</loc>
-    <lastmod>2026-06-25T10:52:23-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:35455/tags/projects/</loc>
-    <lastmod>2026-06-25T10:52:23-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:35455/tags/sourashtra/</loc>
-    <lastmod>2026-06-25T10:52:23-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:35455/tags/</loc>
-    <lastmod>2026-06-25T10:52:23-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:35455/posts/my-favorite-vscode-keybindings/</loc>
+    <loc>https://deepfriedcode.blog/posts/my-favorite-vscode-keybindings/</loc>
     <lastmod>2026-06-05T17:03:24-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:35455/tags/tools/</loc>
+    <loc>https://deepfriedcode.blog/tags/tools/</loc>
     <lastmod>2026-06-05T17:03:24-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:35455/posts/a-love-letter-to-vim/</loc>
+    <loc>https://deepfriedcode.blog/posts/a-love-letter-to-vim/</loc>
     <lastmod>2026-06-05T16:12:16-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:35455/posts/building-the-site/</loc>
+    <loc>https://deepfriedcode.blog/posts/building-the-site/</loc>
     <lastmod>2026-06-05T14:51:13-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:35455/tags/guides/</loc>
+    <loc>https://deepfriedcode.blog/tags/guides/</loc>
     <lastmod>2026-06-05T14:51:13-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:35455/tags/hugo/</loc>
+    <loc>https://deepfriedcode.blog/tags/hugo/</loc>
     <lastmod>2026-06-05T14:51:13-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:35455/tags/website/</loc>
+    <loc>https://deepfriedcode.blog/tags/website/</loc>
     <lastmod>2026-06-05T14:51:13-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:35455/about/</loc>
+    <loc>https://deepfriedcode.blog/about/</loc>
   </url><url>
-    <loc>http://localhost:35455/categories/</loc>
+    <loc>https://deepfriedcode.blog/categories/</loc>
   </url>
 </urlset>

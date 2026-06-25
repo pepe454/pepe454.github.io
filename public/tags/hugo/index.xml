@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Hugo on Deep Fried Code</title>
-    <link>http://localhost:35455/tags/hugo/</link>
+    <link>https://deepfriedcode.blog/tags/hugo/</link>
     <description>Recent content in Hugo on Deep Fried Code</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Jun 2026 14:51:13 -0400</lastBuildDate>
-    <atom:link href="http://localhost:35455/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://deepfriedcode.blog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building the Site</title>
-      <link>http://localhost:35455/posts/building-the-site/</link>
+      <link>https://deepfriedcode.blog/posts/building-the-site/</link>
       <pubDate>Fri, 05 Jun 2026 14:51:13 -0400</pubDate>
-      <guid>http://localhost:35455/posts/building-the-site/</guid>
+      <guid>https://deepfriedcode.blog/posts/building-the-site/</guid>
       <description>&lt;h2 id=&#34;step-1-setting-up-hugo&#34;&gt;Step 1: Setting Up Hugo&lt;/h2&gt;
 &lt;p&gt;Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support.
 Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.&lt;/p&gt;
