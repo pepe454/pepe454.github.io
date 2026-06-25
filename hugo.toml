@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'Deep Fried Code'
 theme = 'PaperMod'
 
+[params.label]
+  iconSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="30" height="30"><rect width="64" height="64" fill="#111"></rect><defs><filter id="glitch"><feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="2" result="turb"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="turb" scale="2"></feDisplacementMap></filter></defs><g filter="url(#glitch)"><text x="32" y="32" font-size="24" font-family="monospace" fill="#ffffff" text-anchor="middle" dominant-baseline="central">&lt;/&gt;</text><text x="33" y="31" font-size="24" font-family="monospace" fill="#ff0000" opacity="0.5" text-anchor="middle" dominant-baseline="central">&lt;/&gt;</text><text x="31" y="33" font-size="24" font-family="monospace" fill="#00ffff" opacity="0.5" text-anchor="middle" dominant-baseline="central">&lt;/&gt;</text></g></svg>'
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.parser]
