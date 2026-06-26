@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Building the Site | Deep Fried Code</title>
 <meta name="keywords" content="Guides, Hugo, Website">
 <meta name="description" content="Step 1: Setting Up Hugo
@@ -15,16 +15,16 @@ First, get hugo for ubuntu.
 $ sudo apt install hugo
 Next, I setup the project directory and generated the skeleton using hugo:">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/building-the-site/">
+<link rel="canonical" href="https://deepfriedcode.blog/posts/building-the-site/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.af3bae05a5fe4f4becf192ff5c56499981ef8d852d17b63fc1bbaa9cffce2698.css" integrity="sha256-rzuuBaX&#43;T0vs8ZL/XFZJmYHvjYUtF7Y/wbuqnP/OJpg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://deepfriedcode.blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://deepfriedcode.blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://deepfriedcode.blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://deepfriedcode.blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://deepfriedcode.blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/building-the-site/">
+<link rel="alternate" hreflang="en" href="https://deepfriedcode.blog/posts/building-the-site/">
 <noscript>
     <style>
         #theme-toggle,
@@ -71,13 +71,83 @@ Next, I setup the project directory and generated the skeleton using hugo:">
     }
 
 </script><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:url" content="https://deepfriedcode.blog/posts/building-the-site/">
+  <meta property="og:site_name" content="Deep Fried Code">
+  <meta property="og:title" content="Building the Site">
+  <meta property="og:description" content="Step 1: Setting Up Hugo Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support. Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.
+Installing hugo and setting up the site First, get hugo for ubuntu.
+$ sudo apt install hugo Next, I setup the project directory and generated the skeleton using hugo:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-05T14:51:13-04:00">
+    <meta property="article:modified_time" content="2026-06-05T14:51:13-04:00">
+    <meta property="article:tag" content="Guides">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Website">
 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Building the Site">
+  <meta name="twitter:description" content="Step 1: Setting Up Hugo Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support. Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.
+Installing hugo and setting up the site First, get hugo for ubuntu.
+$ sudo apt install hugo Next, I setup the project directory and generated the skeleton using hugo:">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://deepfriedcode.blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Building the Site",
+      "item": "https://deepfriedcode.blog/posts/building-the-site/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Building the Site",
+  "name": "Building the Site",
+  "description": "Step 1: Setting Up Hugo Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support. Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.\nInstalling hugo and setting up the site First, get hugo for ubuntu.\n$ sudo apt install hugo Next, I setup the project directory and generated the skeleton using hugo:\n",
+  "keywords": [
+    "Guides", "Hugo", "Website"
+  ],
+  "articleBody": "Step 1: Setting Up Hugo Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support. Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.\nInstalling hugo and setting up the site First, get hugo for ubuntu.\n$ sudo apt install hugo Next, I setup the project directory and generated the skeleton using hugo:\n$ hugo new site deepfriedcode.blog This put all the skeleton in place. However, my site had no content or theming! If we run the server now, we will get a Page not found:\n$ cd deepfriedcode.blog $ hugo server Now let’s add our first post and see if it works:\n$ hugo new posts/first-post.md This creates a new markdown file in the content/posts directory. However, we still end up getting a blank page when we use hugo server. This is because we have not added a theme yet.\nAdding the theme Let’s add a theme to give a layout and structure to the website. I’m using the PaperMod theme, so let’s add it now. First, add the theme as a submodule, which will clone the repository for the theme into your themes subfolder:\n$ git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod Now we need to configure the site. I edited the hugo.toml file like so:\nbaseURL = 'https://deepfriedcode.blog/' languageCode = 'en-us' title = 'Deep Fried Code' theme = 'PaperMod' Run the server again. This time, add the -D flag, which includes draft posts. These are posts that don’t get built into your site in production.\n$ hugo server -D It’s alive! Step 2: Deploying to github Follow the instructions at this post: Host on GitHub Pages You will need to setup the actions workflow to build the site and deploy it to github pages.\nOnce you have added the github workflow, it should build automatically when you commit push to github. great. Now, it’s time to configure your repo.\nIn your repo \u003e settings \u003e Pages (under Code and Automation), select “Github Actions” as your source for the build and deployment: If you have a custom domain like I do, you will need to put in your custom domain name like so: The custom domain will fail on the initial setup. Don’t worry! This is all part of it. Now we have to register our domain and have the DNS records point to the github site.\nStep 3: Registering the domain Now that we’ve got our github pages setup and the website is built, it’s time to register a custom domain. I chose cloudflare, because I am familiar with it and have used it before. You can purchase a domain name here: Cloudflare Registrar\nOnce you’ve gone and puchased the domain for your site, it’s time to configure DNS. I followed this guide from Github on how to point DNS records for your custom domain to the github hosted site: Managing a custom domain for your GitHub Pages site. However, you can follow my instructions below and it should turn out just fine.\nThis part took a little bit of trial and error for me, but if you follow my example it should be very straightforward. In order to configure DNS Records in cloudflare, on the left drawer in the cloudflare portal, go to DNS \u003e Records.\nNow configure the A-name records. This will point the custom domain for your site to the github ipv4 addresses. Since there are multiple ipv4 addresses listed, you will need to create an A-name record for each one. In addition, assuming you’re using the root of your custom domain, use the @ symbol to reference that instead of a string. This is what your dashboard should look like after adding the A-name records: Next, you can add the ipv6 addresses using AAAA-name records: Finally, we can have the www. also point as an alias to your custom domain. This will let www url’s alias to your domain: After configuring the DNS Records, we want clients to use HTTPS instead of HTTP. This is a simple blog site, so HTTPS doesn’t really matter, but browsers will users a warning for sites that use HTTP. On the left drawer, go to Rules \u003e Page Rules. You can add a rule that will force clients to use HTTPS: We can also leverage Cloudflare’s CDN to cache our site for better performance, by serving content in data centers closer to users: Step 4: Add content and redeploy Ok! We’ve set up the website. We wrote our first markdown blog post. We pushed it to github. We configured github pages. We bought a domain name. We configured dns to point to github pages. Phew. That was a lot! I’m tired just typing that all out!\nOnce we have a github pages site, we should actually add some content. Open that first-post.md file up, and add some content. It’s time to deploy. You also need to set draft=False on the front matter. This will actually build the page when you run hugo build. Finally, we can build to generate the HTML from .md files:\n$ hugo build That should add a bunch of files in the ./public directory in your project root. Go ahead and commit and push to github. Our site should start building automatically now. While that’s happening, you can check on the custom domain settings. For me, this didn’t work at first, because I had to configure cloudflare. After doing so, you should be able to retry adding your custom domain. If all goes well, you will get the fabled green checkmark and your site will be live on your custom domain: Navigate to your custom domain on the browser, et voilà! Your site is live!\nRecap I hope this guide was helpful for you and you were able to setup your website successfully. Using hugo, a prebuilt theme like PaperMod, hosting on Github pages, and using Cloudflare DNS are all surefire ways to make this process as easy as possible.\n",
+  "wordCount" : "1010",
+  "inLanguage": "en",
+  "datePublished": "2026-06-05T14:51:13-04:00",
+  "dateModified": "2026-06-05T14:51:13-04:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://deepfriedcode.blog/posts/building-the-site/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Deep Fried Code",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://deepfriedcode.blog/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Deep Fried Code (Alt + H)">
+            <a href="https://deepfriedcode.blog/" accesskey="h" title="Deep Fried Code (Alt + H)">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="30" height="30"><rect width="64" height="64" fill="#111"></rect><defs><filter id="glitch"><feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="2" result="turb"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="turb" scale="2"></feDisplacementMap></filter></defs><g filter="url(#glitch)"><text x="32" y="32" font-size="24" font-family="monospace" fill="#ffffff" text-anchor="middle" dominant-baseline="central">&lt;/&gt;</text><text x="33" y="31" font-size="24" font-family="monospace" fill="#ff0000" opacity="0.5" text-anchor="middle" dominant-baseline="central">&lt;/&gt;</text><text x="31" y="33" font-size="24" font-family="monospace" fill="#00ffff" opacity="0.5" text-anchor="middle" dominant-baseline="central">&lt;/&gt;</text></g></svg>Deep Fried Code</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -104,22 +174,22 @@ Next, I setup the project directory and generated the skeleton using hugo:">
         </div>
         <ul id="menu" class="menu">
             <li>
-                <a href="http://localhost:1313/" title="Home">
+                <a href="https://deepfriedcode.blog/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Posts">
+                <a href="https://deepfriedcode.blog/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="About">
+                <a href="https://deepfriedcode.blog/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/tags/" title="Tags">
+                <a href="https://deepfriedcode.blog/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -231,9 +301,9 @@ Using hugo, a prebuilt theme like PaperMod, hosting on Github pages, and using C
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/guides/">Guides</a></li>
-      <li><a href="http://localhost:1313/tags/hugo/">Hugo</a></li>
-      <li><a href="http://localhost:1313/tags/website/">Website</a></li>
+      <li><a href="https://deepfriedcode.blog/tags/guides/">Guides</a></li>
+      <li><a href="https://deepfriedcode.blog/tags/hugo/">Hugo</a></li>
+      <li><a href="https://deepfriedcode.blog/tags/website/">Website</a></li>
     </ul>
   </footer>
 </article>
@@ -258,7 +328,23 @@ Using hugo, a prebuilt theme like PaperMod, hosting on Github pages, and using C
 (function () {
   const sidebar = document.querySelector('.toc-sidebar');
   if (!sidebar) return;
-  const links = Array.from(sidebar.querySelectorAll('a[href^="#"]'));
+
+  
+  const tocList = sidebar.querySelector('#TableOfContents > ul');
+  if (tocList) {
+    const topItem = document.createElement('li');
+    const topLink = document.createElement('a');
+    topLink.href = '#';
+    topLink.textContent = '(Top)';
+    topLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    });
+    topItem.appendChild(topLink);
+    tocList.insertBefore(topItem, tocList.firstChild);
+  }
+
+  const links = Array.from(sidebar.querySelectorAll('#TableOfContents a[href^="#"]:not([href="#"])'));
   if (!links.length) return;
 
   const linkMap = {};
@@ -278,7 +364,7 @@ Using hugo, a prebuilt theme like PaperMod, hosting on Github pages, and using C
       const id = decodeURIComponent(link.getAttribute('href').slice(1));
       const target = document.getElementById(id);
       if (!target) return;
-      const top = target.getBoundingClientRect().top + window.scrollY
+      const top = target.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
     });
   });
@@ -310,7 +396,7 @@ Using hugo, a prebuilt theme like PaperMod, hosting on Github pages, and using C
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">Deep Fried Code</a></span> · 
+        <span>&copy; 2026 <a href="https://deepfriedcode.blog/">Deep Fried Code</a></span> · 
 
     
     

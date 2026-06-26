@@ -6,7 +6,23 @@
 (function () {
   const sidebar = document.querySelector('.toc-sidebar');
   if (!sidebar) return;
-  const links = Array.from(sidebar.querySelectorAll('a[href^="#"]'));
+
+  // Inject (Top) as first item in the TOC list
+  const tocList = sidebar.querySelector('#TableOfContents > ul');
+  if (tocList) {
+    const topItem = document.createElement('li');
+    const topLink = document.createElement('a');
+    topLink.href = '#';
+    topLink.textContent = '(Top)';
+    topLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    });
+    topItem.appendChild(topLink);
+    tocList.insertBefore(topItem, tocList.firstChild);
+  }
+
+  const links = Array.from(sidebar.querySelectorAll('#TableOfContents a[href^="#"]:not([href="#"])'));
   if (!links.length) return;
 
   const linkMap = {};
@@ -26,7 +42,7 @@
       const id = decodeURIComponent(link.getAttribute('href').slice(1));
       const target = document.getElementById(id);
       if (!target) return;
-      const top = target.getBoundingClientRect().top + window.scrollY
+      const top = target.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
     });
   });

@@ -55,10 +55,6 @@ to eat food and celebrate life and share in the joy of a delightful meal.
 Pictured above is from my wedding reception, where we sat in long banquet style seating in the wedding hall and ate various 
 chutneys, pongals, and rice on top of banana leafs with our hands.
 
-
-
-## Next Steps
-
 Now that I'm embarking on my journey to build the website, I will need to model the data. 
 Join me on my next post, where I set up the database : [Dictionary Website, Part 2: Database Design](../dictionary-website-part-2)
 
