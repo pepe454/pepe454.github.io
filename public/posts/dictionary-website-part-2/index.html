@@ -712,9 +712,6 @@ run on launch. Dang. I love postgres.</p>
   const links = Array.from(sidebar.querySelectorAll('a[href^="#"]'));
   if (!links.length) return;
 
-  const SCROLL_OFFSET = 100; 
-  const ACTIVE_THRESHOLD = SCROLL_OFFSET + 10;
-
   const linkMap = {};
   links.forEach(function (link) {
     const id = decodeURIComponent(link.getAttribute('href').slice(1));
@@ -732,7 +729,7 @@ run on launch. Dang. I love postgres.</p>
       const id = decodeURIComponent(link.getAttribute('href').slice(1));
       const target = document.getElementById(id);
       if (!target) return;
-      const top = target.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+      const top = target.getBoundingClientRect().top + window.scrollY
       window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
     });
   });
@@ -745,7 +742,7 @@ run on launch. Dang. I love postgres.</p>
       activeId = headings[headings.length - 1].id;
     } else {
       for (let i = 0; i < headings.length; i++) {
-        if (headings[i].getBoundingClientRect().top <= ACTIVE_THRESHOLD) {
+        if (headings[i].getBoundingClientRect().top <= 10) {
           activeId = headings[i].id;
         }
       }
