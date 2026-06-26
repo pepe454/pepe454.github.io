@@ -1,0 +1,65 @@
+.toc-sidebar {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .toc-sidebar {
+    display: block;
+    position: fixed;
+    top: calc(var(--header-height) + var(--gap));
+    left: calc(50% + var(--main-width) / 2 + var(--gap));
+    width: 210px;
+    max-height: calc(100vh - var(--header-height) - var(--gap) * 2);
+    overflow-y: auto;
+    padding: 1rem;
+    background: var(--code-bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    font-size: 0.8rem;
+    scrollbar-width: thin;
+  }
+
+  /* Hide the inline collapsible TOC on wide screens — sidebar takes over */
+  .post-single details.toc {
+    display: none;
+  }
+}
+
+.toc-sidebar-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.toc-sidebar #TableOfContents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-sidebar #TableOfContents ul ul {
+  padding-left: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+.toc-sidebar #TableOfContents a {
+  color: var(--secondary);
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0 0.2rem 0.5rem;
+  border-left: 2px solid transparent;
+  line-height: 1.4;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.toc-sidebar #TableOfContents a:hover {
+  color: var(--primary);
+}
+
+.toc-sidebar #TableOfContents a.active {
+  color: var(--primary);
+  border-left-color: var(--primary);
+}

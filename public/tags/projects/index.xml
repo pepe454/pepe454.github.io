@@ -28,7 +28,7 @@ Moreover, there are database utilities that will allow for search and even fuzzy
       <guid>http://localhost:1313/posts/dictionary-website-part-1/</guid>
       <description>&lt;p&gt;This post is Part 1 of my series on building a dictionary website for the Sourashtra Language.&lt;/p&gt;
 &lt;img alt=&#34;Meenakshi Amman Temple of Madurai&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/dictionary-website-part-1/meenakshi-amman-temple-india.avif&#34;&gt;&lt;p&gt;Photograph by Poras Chaudhary, The New York Times/Redux&lt;/p&gt;
-&lt;h3 id=&#34;project-background&#34;&gt;Project Background&lt;/h3&gt;
+&lt;h2 id=&#34;project-background&#34;&gt;Project Background&lt;/h2&gt;
 &lt;p&gt;This is my first post on the dictionary website project, where I am building a site for translations and dictionary for the Sourashtra language.
 I am currently studying the language to better communicate with my in-laws after marrying into the community.
 Sourashtra is an endangered language with less than one million speakers. It is spoken primarily in Madurai, though speakers of the language reside

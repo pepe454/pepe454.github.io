@@ -17,7 +17,7 @@ in many cities in Tamil Nadu. The goal of this website is to provide a way for p
 example sentences and their english translations, and in the future, an audio player to learn pronunciations.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/dictionary-website-part-1/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.6ff46447b1fa3f8a5cc0bcae48088decc3ae37f5fbc99406a3aefc3bf0e6044a.css" integrity="sha256-b/RkR7H6P4pcwLyuSAiN7MOuN/X7yZQGo678O/DmBEo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.af3bae05a5fe4f4becf192ff5c56499981ef8d852d17b63fc1bbaa9cffce2698.css" integrity="sha256-rzuuBaX&#43;T0vs8ZL/XFZJmYHvjYUtF7Y/wbuqnP/OJpg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -225,6 +225,75 @@ Join me on my next post, where I set up the database : <a href="../dictionary-we
     </ul>
   </footer>
 </article>
+<aside class="toc-sidebar"><div class="toc-sidebar-title">Table of Contents</div><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#project-background">Project Background</a></li>
+        <li><a href="#project-motivation">Project Motivation</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#joman">Joman</a></li>
+        <li><a href="#next-steps">Next Steps</a></li>
+        <li><a href="#sourashtra-resources">Sourashtra Resources</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav><script>
+(function () {
+  const sidebar = document.querySelector('.toc-sidebar');
+  if (!sidebar) return;
+  const links = Array.from(sidebar.querySelectorAll('a[href^="#"]'));
+  if (!links.length) return;
+
+  const SCROLL_OFFSET = 100; 
+  const ACTIVE_THRESHOLD = SCROLL_OFFSET + 10;
+
+  const linkMap = {};
+  links.forEach(function (link) {
+    const id = decodeURIComponent(link.getAttribute('href').slice(1));
+    if (id) linkMap[id] = link;
+  });
+
+  const headings = Array.from(document.querySelectorAll(
+    '.post-content h1[id], .post-content h2[id], .post-content h3[id], ' +
+    '.post-content h4[id], .post-content h5[id], .post-content h6[id]'
+  ));
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const id = decodeURIComponent(link.getAttribute('href').slice(1));
+      const target = document.getElementById(id);
+      if (!target) return;
+      const top = target.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+      window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+    });
+  });
+
+  function setActive() {
+    let activeId = null;
+
+    const atBottom = (window.scrollY + window.innerHeight) >= (document.documentElement.scrollHeight - 20);
+    if (atBottom && headings.length) {
+      activeId = headings[headings.length - 1].id;
+    } else {
+      for (let i = 0; i < headings.length; i++) {
+        if (headings[i].getBoundingClientRect().top <= ACTIVE_THRESHOLD) {
+          activeId = headings[i].id;
+        }
+      }
+      if (!activeId && headings.length) activeId = headings[0].id;
+    }
+
+    links.forEach(function (l) { l.classList.remove('active'); });
+    if (activeId && linkMap[activeId]) linkMap[activeId].classList.add('active');
+  }
+
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+})();
+</script>
+</aside>
     </main>
     
 <footer class="footer">

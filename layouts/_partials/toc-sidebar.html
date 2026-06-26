@@ -1,0 +1,60 @@
+{{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
+{{- if ge (len $headers) 1 -}}
+<div class="toc-sidebar-title">{{- i18n "toc" | default "Table of Contents" }}</div>
+{{- .TableOfContents -}}
+<script>
+(function () {
+  const sidebar = document.querySelector('.toc-sidebar');
+  if (!sidebar) return;
+  const links = Array.from(sidebar.querySelectorAll('a[href^="#"]'));
+  if (!links.length) return;
+
+  const SCROLL_OFFSET = 100; // px above heading after jump (header + breathing room)
+  const ACTIVE_THRESHOLD = SCROLL_OFFSET + 10;
+
+  const linkMap = {};
+  links.forEach(function (link) {
+    const id = decodeURIComponent(link.getAttribute('href').slice(1));
+    if (id) linkMap[id] = link;
+  });
+
+  const headings = Array.from(document.querySelectorAll(
+    '.post-content h1[id], .post-content h2[id], .post-content h3[id], ' +
+    '.post-content h4[id], .post-content h5[id], .post-content h6[id]'
+  ));
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const id = decodeURIComponent(link.getAttribute('href').slice(1));
+      const target = document.getElementById(id);
+      if (!target) return;
+      const top = target.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+      window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+    });
+  });
+
+  function setActive() {
+    let activeId = null;
+
+    const atBottom = (window.scrollY + window.innerHeight) >= (document.documentElement.scrollHeight - 20);
+    if (atBottom && headings.length) {
+      activeId = headings[headings.length - 1].id;
+    } else {
+      for (let i = 0; i < headings.length; i++) {
+        if (headings[i].getBoundingClientRect().top <= ACTIVE_THRESHOLD) {
+          activeId = headings[i].id;
+        }
+      }
+      if (!activeId && headings.length) activeId = headings[0].id;
+    }
+
+    links.forEach(function (l) { l.classList.remove('active'); });
+    if (activeId && linkMap[activeId]) linkMap[activeId].classList.add('active');
+  }
+
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+})();
+</script>
+{{- end -}}

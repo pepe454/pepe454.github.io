@@ -16,7 +16,7 @@
       <description>&lt;h2 id=&#34;step-1-setting-up-hugo&#34;&gt;Step 1: Setting Up Hugo&lt;/h2&gt;
 &lt;p&gt;Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support.
 Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.&lt;/p&gt;
-&lt;h4 id=&#34;installing-hugo-and-setting-up-the-site&#34;&gt;Installing hugo and setting up the site&lt;/h4&gt;
+&lt;h3 id=&#34;installing-hugo-and-setting-up-the-site&#34;&gt;Installing hugo and setting up the site&lt;/h3&gt;
 &lt;p&gt;First, get hugo for ubuntu.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo apt install hugo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next, I setup the project directory and generated the skeleton using hugo:&lt;/p&gt;</description>
