@@ -139,7 +139,45 @@ Moreover, there are database utilities that will allow for search and even fuzzy
 <span title='2026-06-25 11:25:58 -0400 EDT'>June 25, 2026</span>
 
 </div>
-  </header> 
+  </header> <details class="toc"  open>
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">Table of Contents</span>
+    </summary>
+
+    <div class="inner"><ul>
+            <li>
+                <a href="#building-the-database" aria-label="Building the Database">Building the Database</a></li>
+            <li>
+                <a href="#docker-compose-setup" aria-label="Docker Compose Setup">Docker Compose Setup</a></li>
+            <li>
+                <a href="#entity-relationship-diagrams" aria-label="Entity Relationship Diagrams">Entity Relationship Diagrams</a><ul>
+                    
+            <li>
+                <a href="#words-the-foundation-of-the-database" aria-label="Words: The Foundation of the database">Words: The Foundation of the database</a></li>
+            <li>
+                <a href="#translations" aria-label="Translations">Translations</a></li>
+            <li>
+                <a href="#sentences" aria-label="Sentences">Sentences</a></li>
+            <li>
+                <a href="#categories" aria-label="Categories">Categories</a></li>
+            <li>
+                <a href="#word-metadata" aria-label="Word Metadata">Word Metadata</a></li>
+            <li>
+                <a href="#saving-the-file" aria-label="Saving the file">Saving the file</a></li></ul>
+            </li>
+            <li>
+                <a href="#creating-the-schema" aria-label="Creating the schema">Creating the schema</a><ul>
+                    
+            <li>
+                <a href="#adding-some-seed-data" aria-label="Adding some seed data">Adding some seed data</a></li></ul>
+            </li>
+            <li>
+                <a href="#recap" aria-label="Recap">Recap</a>
+            </li>
+        </ul>
+    </div>
+</details>
+
   <div class="post-content md-content"><p>The first step in building the dictionary is data design. I will be using Postgress as a SQL relational database,
 and using PgAdmin to assist in the design of the tables and their relationships.</p>
 <h2 id="building-the-database">Building the Database<a hidden class="anchor" aria-hidden="true" href="#building-the-database">#</a></h2>
@@ -212,7 +250,7 @@ I will organize the schema to allow for sensible joins using foreign keys, allow
 <p>Once you login to PGAdmin, you can go into the database and create a new ER Diagram:</p>
 <img alt="PgAdmin Server Setup ER diagram" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-ERD-Setup.png"><p>This is a really easy and intuitive way to create database tables. Instead of using SQL Data Definition Language (DDL) directly,
 I can simply design the tables using an easy interface and focus on the parts that matter.</p>
-<h4 id="words-the-foundation-of-the-database">Words: The Foundation of the database<a hidden class="anchor" aria-hidden="true" href="#words-the-foundation-of-the-database">#</a></h4>
+<h3 id="words-the-foundation-of-the-database">Words: The Foundation of the database<a hidden class="anchor" aria-hidden="true" href="#words-the-foundation-of-the-database">#</a></h3>
 <p>The first table I will design is the words table. This is very important and will be the fundamental building block of the database.
 All other tables will be related to this table in some way.</p>
 <p>Now that I&rsquo;m in the ER Diagram page, I can set up the words table like so:
@@ -228,7 +266,7 @@ I don&rsquo;t have to join with the other tables every time I want to read out a
 </ul>
 <p>Excellent. Now that I&rsquo;ve set up the words, it&rsquo;s time to set up the rest of the database. I&rsquo;ve decided to leverage the
 relational power of SQL to connect this words table to other tables</p>
-<h4 id="translations">Translations<a hidden class="anchor" aria-hidden="true" href="#translations">#</a></h4>
+<h3 id="translations">Translations<a hidden class="anchor" aria-hidden="true" href="#translations">#</a></h3>
 <p>First is translations - these will be a many-to-many mapping from sourashtra words to other words.
 <img alt="PgAdmin Translations" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-Translations.png"></p>
 <p>This design is very flexible, because it allows me to add Tamil translations or any other language&rsquo;s translation without
@@ -240,18 +278,18 @@ for a word that you have already deleted!</p>
 <img alt="PgAdmin Translations" loading="lazy" src="/posts/dictionary-website-part-2/PGAdminERD-FK2.png"><p>The other nice part about this design is that I can have multiple translations for a single word.
 Namely, if a sourashtra word has multiple meanings in English, I can simply have multiple rows in this table.
 This is the beauty of a many-to-many table also known as a join table or mapping table.</p>
-<h4 id="sentences">Sentences<a hidden class="anchor" aria-hidden="true" href="#sentences">#</a></h4>
+<h3 id="sentences">Sentences<a hidden class="anchor" aria-hidden="true" href="#sentences">#</a></h3>
 <p>The other table I have set up is sentences. This is a full text sentence table, which will have mappings from each
 sentence to constituent parts, via the word_in_context table</p>
 <img alt="PgAdmin Sentences" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-Sentences.png"><p>This relation, word in context, allows me to connect many-to-many: one sentence can be connected to many words, and
 one word may be connected to many sentences.</p>
-<img alt="PgAdmin Sentences" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-WordInContext.png"><h4 id="categories">Categories<a hidden class="anchor" aria-hidden="true" href="#categories">#</a></h4>
+<img alt="PgAdmin Sentences" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-WordInContext.png"><h3 id="categories">Categories<a hidden class="anchor" aria-hidden="true" href="#categories">#</a></h3>
 <p>In my view, it is very helpful to learn related words. If you are learning about household things, it&rsquo;s helpful to learn
 all the related words, like bed, door, chair, bathroom, kitchen, oven, stove, table, plates, bowls, etc&hellip;</p>
 <img alt="PgAdmin Categories" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-Categories.png"><p>Thus, I have also set up a categories table. Like the other 2 tables, sentences and translations, this is yet another
 many-to-many relationship. A single word can be a part of multiple categories, and likewise, a category will certainly have
 multiple words.</p>
-<img alt="PgAdmin Categories" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-WordCategories.png"><h4 id="word-metadata">Word Metadata<a hidden class="anchor" aria-hidden="true" href="#word-metadata">#</a></h4>
+<img alt="PgAdmin Categories" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-WordCategories.png"><h3 id="word-metadata">Word Metadata<a hidden class="anchor" aria-hidden="true" href="#word-metadata">#</a></h3>
 <p>Of course, it will also be helpful to have context about each word. We will want to know:</p>
 <ul>
 <li>which language a word is a part of ; and</li>
@@ -265,7 +303,7 @@ on the other tables, but I will not have to join.</p>
 <p><img alt="PgAdmin Languages" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-Languages.png">
 <img alt="PgAdmin PartOfSpeech" loading="lazy" src="/posts/dictionary-website-part-2/PGAdmin-PartOfSpeech.png"></p>
 <p>Ok, I&rsquo;ve designed the relations and the foreign keys. Now it&rsquo;s time to create the database.</p>
-<h4 id="saving-the-file">Saving the file<a hidden class="anchor" aria-hidden="true" href="#saving-the-file">#</a></h4>
+<h3 id="saving-the-file">Saving the file<a hidden class="anchor" aria-hidden="true" href="#saving-the-file">#</a></h3>
 <p>Once I set up the tables, I can now hit this Generate SQL button:
 <img alt="PgAdmin Generate SQL" loading="lazy" src="/posts/dictionary-website-part-2/PGAdminERD3.png"></p>
 <p>It will, you guessed it, generate a SQL File for you automatically:
@@ -321,7 +359,7 @@ the entrypoints scripts, which automatically run as soon as the postgres docker 
 </span></span></code></pre></div><p>Now, every time I start postgres on a fresh install or if I want to obliterate the existing database,
 I can delete the volume and simply docker compose up once again, then this create-schema script will automatically
 run on launch. Dang. I love postgres.</p>
-<h4 id="adding-some-seed-data">Adding some seed data<a hidden class="anchor" aria-hidden="true" href="#adding-some-seed-data">#</a></h4>
+<h3 id="adding-some-seed-data">Adding some seed data<a hidden class="anchor" aria-hidden="true" href="#adding-some-seed-data">#</a></h3>
 <p>Having a schema is great and all, but it&rsquo;s kinda boring. You can&rsquo;t do anything with it. It&rsquo;s like having a house with no furniture.</p>
 <p>I wanted to be able to test out some queries, so I inserted some words using an initial-seed.sql script:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>;
@@ -615,8 +653,16 @@ run on launch. Dang. I love postgres.</p>
   </tbody>
 </table>
 <h2 id="recap">Recap<a hidden class="anchor" aria-hidden="true" href="#recap">#</a></h2>
-<p>I covered a lot on this post, but we are just getting started. The next step is to build out the
-language corpus and start seeding some data into the db!</p>
+<p>I covered a lot on this post -</p>
+<ul>
+<li>docker compose file to run postgres and pgadmin</li>
+<li>.env file to store environment variables and use them for docker compose</li>
+<li>using pgadmin, connecting to database and creating ER Diagrams</li>
+<li>creating tables and foreign key relationships using database design principles</li>
+<li>export the ER Diagram to a PNG and SQL file and copy from pgadmin to local machine</li>
+<li>add a seed script. connect to psql, and run queries to test the database</li>
+</ul>
+<p>However, we are just getting started. The next step is to build out the language corpus and start seeding some data into the db!</p>
 
 
   </div>

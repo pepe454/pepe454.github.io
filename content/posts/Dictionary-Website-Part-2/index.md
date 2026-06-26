@@ -106,7 +106,7 @@ This is a really easy and intuitive way to create database tables. Instead of us
 I can simply design the tables using an easy interface and focus on the parts that matter.
 
 
-#### Words: The Foundation of the database
+### Words: The Foundation of the database
 
 The first table I will design is the words table. This is very important and will be the fundamental building block of the database.
 All other tables will be related to this table in some way.
@@ -126,7 +126,7 @@ Excellent. Now that I've set up the words, it's time to set up the rest of the d
 relational power of SQL to connect this words table to other tables
 
 
-#### Translations 
+### Translations 
 
 First is translations - these will be a many-to-many mapping from sourashtra words to other words. 
 ![PgAdmin Translations](./PGAdmin-Translations.png)
@@ -148,7 +148,7 @@ Namely, if a sourashtra word has multiple meanings in English, I can simply have
 This is the beauty of a many-to-many table also known as a join table or mapping table.
 
 
-#### Sentences
+### Sentences
 
 The other table I have set up is sentences. This is a full text sentence table, which will have mappings from each 
 sentence to constituent parts, via the word_in_context table
@@ -161,7 +161,7 @@ one word may be connected to many sentences.
 ![PgAdmin Sentences](./PGAdmin-WordInContext.png)
 
 
-#### Categories
+### Categories
 
 In my view, it is very helpful to learn related words. If you are learning about household things, it's helpful to learn 
 all the related words, like bed, door, chair, bathroom, kitchen, oven, stove, table, plates, bowls, etc...
@@ -175,7 +175,7 @@ multiple words.
 ![PgAdmin Categories](./PGAdmin-WordCategories.png)
 
 
-#### Word Metadata
+### Word Metadata
 
 Of course, it will also be helpful to have context about each word. We will want to know:
 - which language a word is a part of ; and 
@@ -193,7 +193,7 @@ on the other tables, but I will not have to join.
 
 Ok, I've designed the relations and the foreign keys. Now it's time to create the database.
 
-#### Saving the file
+### Saving the file
 
 Once I set up the tables, I can now hit this Generate SQL button: 
 ![PgAdmin Generate SQL](./PGAdminERD3.png)
@@ -288,7 +288,7 @@ I can delete the volume and simply docker compose up once again, then this creat
 run on launch. Dang. I love postgres.
 
 
-#### Adding some seed data
+### Adding some seed data
 
 Having a schema is great and all, but it's kinda boring. You can't do anything with it. It's like having a house with no furniture.
 
@@ -472,5 +472,12 @@ on other_words.word_id = wt.other_word_id
 
 ## Recap 
 
-I covered a lot on this post, but we are just getting started. The next step is to build out the 
-language corpus and start seeding some data into the db!
+I covered a lot on this post -
+- docker compose file to run postgres and pgadmin
+- .env file to store environment variables and use them for docker compose
+- using pgadmin, connecting to database and creating ER Diagrams
+- creating tables and foreign key relationships using database design principles
+- export the ER Diagram to a PNG and SQL file and copy from pgadmin to local machine
+- add a seed script. connect to psql, and run queries to test the database
+
+However, we are just getting started. The next step is to build out the language corpus and start seeding some data into the db!

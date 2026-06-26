@@ -139,11 +139,37 @@ Next, I setup the project directory and generated the skeleton using hugo:">
 <span title='2026-06-05 14:51:13 -0400 EDT'>June 5, 2026</span>
 
 </div>
-  </header> 
+  </header> <details class="toc"  open>
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">Table of Contents</span>
+    </summary>
+
+    <div class="inner"><ul>
+            <li>
+                <a href="#step-1-setting-up-hugo" aria-label="Step 1: Setting Up Hugo">Step 1: Setting Up Hugo</a><ul>
+                    
+            <li>
+                <a href="#installing-hugo-and-setting-up-the-site" aria-label="Installing hugo and setting up the site">Installing hugo and setting up the site</a></li>
+            <li>
+                <a href="#adding-the-theme" aria-label="Adding the theme">Adding the theme</a></li></ul>
+            </li>
+            <li>
+                <a href="#step-2-deploying-to-github" aria-label="Step 2: Deploying to github">Step 2: Deploying to github</a></li>
+            <li>
+                <a href="#step-3-registering-the-domain" aria-label="Step 3: Registering the domain">Step 3: Registering the domain</a></li>
+            <li>
+                <a href="#step-4-add-content-and-redeploy" aria-label="Step 4: Add content and redeploy">Step 4: Add content and redeploy</a></li>
+            <li>
+                <a href="#recap" aria-label="Recap">Recap</a>
+            </li>
+        </ul>
+    </div>
+</details>
+
   <div class="post-content md-content"><h2 id="step-1-setting-up-hugo">Step 1: Setting Up Hugo<a hidden class="anchor" aria-hidden="true" href="#step-1-setting-up-hugo">#</a></h2>
 <p>Why hugo? I decided to choose a static site generator that was fast, easy to use, and had a lot of support.
 Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.</p>
-<h4 id="installing-hugo-and-setting-up-the-site">Installing hugo and setting up the site<a hidden class="anchor" aria-hidden="true" href="#installing-hugo-and-setting-up-the-site">#</a></h4>
+<h3 id="installing-hugo-and-setting-up-the-site">Installing hugo and setting up the site<a hidden class="anchor" aria-hidden="true" href="#installing-hugo-and-setting-up-the-site">#</a></h3>
 <p>First, get hugo for ubuntu.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install hugo
 </span></span></code></pre></div><p>Next, I setup the project directory and generated the skeleton using hugo:</p>
@@ -154,7 +180,7 @@ Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the in
 </span></span></code></pre></div><img loading="lazy" src="/posts/building-the-site/Page-Not-Found.png"><p>Now let&rsquo;s add our first post and see if it works:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo new posts/first-post.md
 </span></span></code></pre></div><p>This creates a new markdown file in the content/posts directory. However, we still end up getting a blank page when we use hugo server. This is because we have not added a theme yet.</p>
-<h4 id="adding-the-theme">Adding the theme<a hidden class="anchor" aria-hidden="true" href="#adding-the-theme">#</a></h4>
+<h3 id="adding-the-theme">Adding the theme<a hidden class="anchor" aria-hidden="true" href="#adding-the-theme">#</a></h3>
 <p>Let&rsquo;s add a theme to give a layout and structure to the website. I&rsquo;m using the PaperMod theme, so let&rsquo;s add it now. First, add the theme as a submodule, which will clone the repository for the theme into your themes subfolder:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git submodule add --depth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 
 </span></span></code></pre></div><p>Now we need to configure the site. I edited the hugo.toml file like so:</p>
@@ -197,7 +223,8 @@ If you have a custom domain like I do, you will need to put in your custom domai
 <img loading="lazy" src="/posts/building-the-site/Github-Great-Success!.png" title="Github DNS Check Successful"></p>
 <p>Navigate to your custom domain on the browser, et voilà! Your site is live!</p>
 <h2 id="recap">Recap<a hidden class="anchor" aria-hidden="true" href="#recap">#</a></h2>
-<p>I hope this guide was helpful for you and you were able to setup your website successfully. Using hugo, a prebuilt theme like PaperMod, hosting on Github pages, and using Cloudflare DNS are all surefire ways to make this process as easy as possible.</p>
+<p>I hope this guide was helpful for you and you were able to setup your website successfully.
+Using hugo, a prebuilt theme like PaperMod, hosting on Github pages, and using Cloudflare DNS are all surefire ways to make this process as easy as possible.</p>
 
 
   </div>

@@ -12,7 +12,7 @@ Why hugo? I decided to choose a static site generator that was fast, easy to use
 Now it was time to setup the environment. I am using WSL2 with Ubuntu, so the instructions will follow for that.
 
 
-#### Installing hugo and setting up the site 
+### Installing hugo and setting up the site 
 
 First, get hugo for ubuntu.
 ```bash
@@ -40,7 +40,7 @@ $ hugo new posts/first-post.md
 This creates a new markdown file in the content/posts directory. However, we still end up getting a blank page when we use hugo server. This is because we have not added a theme yet.
 
 
-#### Adding the theme
+### Adding the theme
 
 Let's add a theme to give a layout and structure to the website. I'm using the PaperMod theme, so let's add it now. First, add the theme as a submodule, which will clone the repository for the theme into your themes subfolder:
 ```bash
@@ -128,4 +128,5 @@ Navigate to your custom domain on the browser, et voilà! Your site is live!
 
 ## Recap
 
-I hope this guide was helpful for you and you were able to setup your website successfully. Using hugo, a prebuilt theme like PaperMod, hosting on Github pages, and using Cloudflare DNS are all surefire ways to make this process as easy as possible. 
+I hope this guide was helpful for you and you were able to setup your website successfully. 
+Using hugo, a prebuilt theme like PaperMod, hosting on Github pages, and using Cloudflare DNS are all surefire ways to make this process as easy as possible. 

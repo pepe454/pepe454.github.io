@@ -12,7 +12,7 @@ This post is Part 1 of my series on building a dictionary website for the Souras
 Photograph by Poras Chaudhary, The New York Times/Redux
 
 
-### Project Background
+## Project Background
 
 This is my first post on the dictionary website project, where I am building a site for translations and dictionary for the Sourashtra language.
 I am currently studying the language to better communicate with my in-laws after marrying into the community.
@@ -21,7 +21,7 @@ in many cities in Tamil Nadu. The goal of this website is to provide a way for p
 example sentences and their english translations, and in the future, an audio player to learn pronunciations. 
 
 
-### Project Motivation
+## Project Motivation
 
 In my studies, my biggest roadblocks have been:
 - unreliable or unknown translations for common words
@@ -32,7 +32,7 @@ In my studies, my biggest roadblocks have been:
 My goal for this website is to provide resources to people trying to learn Sourashtra and support the language as a valuable reference.
 
 
-### Features
+## Features
 
 The following features will be available on the site to provide a rich learning experience:
 - Search for word in English or Sourashtra
@@ -44,7 +44,7 @@ The following features will be available on the site to provide a rich learning 
 - Sentence to sentence translation for grammatical examples.
 
 
-### Joman
+## Joman
 
 ![Joman at my wedding reception](./Joman.jpg)
 
@@ -57,13 +57,13 @@ chutneys, pongals, and rice on top of banana leafs with our hands.
 
 
 
-### Next Steps
+## Next Steps
 
 Now that I'm embarking on my journey to build the website, I will need to model the data. 
 Join me on my next post, where I set up the database : [Dictionary Website, Part 2: Database Design](../dictionary-website-part-2)
 
 
-### Sourashtra Resources
+## Sourashtra Resources
 - [Thinnal.org - Community Forum](https://thinnal.org/)
 - [Palkar.org - Community and Culture](http://palkar.org/)
 - [Sourashtra Association](https://sourashtraassociation.org/)
